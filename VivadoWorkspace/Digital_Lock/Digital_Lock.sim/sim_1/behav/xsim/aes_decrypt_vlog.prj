@@ -1,0 +1,13 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../../aes_key_expansion.v" \
+"../../../../../inv_mix_columns.v" \
+"../../../../../inv_shift_rows.v" \
+"../../../../../inv_sub_bytes.v" \
+"../../../../../../../src/aes_decrypt.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
