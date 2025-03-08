@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Mar  6 11:42:07 2025" VIVADOVERSION="2022.2">
+
+  <SYSTEMINFO ARCH="artix7" BOARD="digilentinc.com:nexys-a7-100t:part0:1.2" DEVICE="7a100t" NAME="embsys" PACKAGE="csg324" SPEEDGRADE="-1"/>
+
+  <EXTERNALPORTS/>
+
+  <EXTERNALINTERFACES/>
+
+  <MODULES>
+    <MODULE COREREVISION="1" FULLNAME="/inv_mix_columns_0" HWVERSION="1.0" INSTANCE="inv_mix_columns_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="inv_mix_columns" VLNV="xilinx.com:module_ref:inv_mix_columns:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="embsys_inv_mix_columns_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="127" NAME="state" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="127" NAME="new_state" RIGHT="0" SIGIS="undef"/>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/inv_shift_rows_0" HWVERSION="1.0" INSTANCE="inv_shift_rows_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="inv_shift_rows" VLNV="xilinx.com:module_ref:inv_shift_rows:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="embsys_inv_shift_rows_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="127" NAME="state" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="127" NAME="new_state" RIGHT="0" SIGIS="undef"/>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/inv_sub_bytes_0" HWVERSION="1.0" INSTANCE="inv_sub_bytes_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="inv_sub_bytes" VLNV="xilinx.com:module_ref:inv_sub_bytes:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="embsys_inv_sub_bytes_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="127" NAME="state" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="127" NAME="new_state" RIGHT="0" SIGIS="undef"/>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>

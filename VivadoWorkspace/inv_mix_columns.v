@@ -17,6 +17,36 @@ module inv_mix_columns (
                            (mul_by_0b(s0) ^ mul_by_0d(s1) ^ mul_by_09(s2) ^ mul_by_0e(s3)) };
         end
     endfunction
+    
+    // Multiplication in GF(2^8) for AES inverse MixColumns
+function [7:0] mul_by_0e;
+    input [7:0] x;
+    begin
+        mul_by_0e = (x << 1) ^ (x << 2) ^ (x << 3); // x * 0E
+    end
+endfunction
+
+function [7:0] mul_by_09;
+    input [7:0] x;
+    begin
+        mul_by_09 = x ^ (x << 3); // x * 09
+    end
+endfunction
+
+function [7:0] mul_by_0d;
+    input [7:0] x;
+    begin
+        mul_by_0d = x ^ (x << 2) ^ (x << 3); // x * 0D
+    end
+endfunction
+
+function [7:0] mul_by_0b;
+    input [7:0] x;
+    begin
+        mul_by_0b = x ^ (x << 1) ^ (x << 3); // x * 0B
+    end
+endfunction
+
 
     genvar i;
     generate
