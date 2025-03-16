@@ -1,0 +1,12 @@
+vhdl xil_defaultlib  \
+"../../../bd/dlembsys/ip/dlembsys_microblaze_0_0/sim/dlembsys_microblaze_0_0.vhd" \
+"../../../bd/dlembsys/ip/dlembsys_dlmb_v10_0/sim/dlembsys_dlmb_v10_0.vhd" \
+"../../../bd/dlembsys/ip/dlembsys_ilmb_v10_0/sim/dlembsys_ilmb_v10_0.vhd" \
+"../../../bd/dlembsys/ip/dlembsys_dlmb_bram_if_cntlr_0/sim/dlembsys_dlmb_bram_if_cntlr_0.vhd" \
+"../../../bd/dlembsys/ip/dlembsys_ilmb_bram_if_cntlr_0/sim/dlembsys_ilmb_bram_if_cntlr_0.vhd" \
+"../../../bd/dlembsys/ip/dlembsys_mdm_1_0/sim/dlembsys_mdm_1_0.vhd" \
+"../../../bd/dlembsys/ip/dlembsys_rst_clk_wiz_1_100M_0/sim/dlembsys_rst_clk_wiz_1_100M_0.vhd" \
+"../../../bd/dlembsys/ip/dlembsys_axi_uartlite_0_1/sim/dlembsys_axi_uartlite_0_1.vhd" \
+"../../../bd/dlembsys/ip/dlembsys_axi_bram_ctrl_0_0/sim/dlembsys_axi_bram_ctrl_0_0.vhd" \
+
+nosort

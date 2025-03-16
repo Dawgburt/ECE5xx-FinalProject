@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="DLapplication_system-bitFile" value="${project_loc:DLapplication}/_ide/bitstream/DLembsys.bit"/>
+	<item key="DLapplication_system-bmmFile" value="${project_loc:DLapplication}/_ide/bitstream/DLembsys.mmi"/>
+	<item key="DLapplication_system-target" value="Local"/>
+	<item key="DLapplication_system-device" value="Auto Detect"/>
+	<item key="DLapplication_system-partial_bit" value="false"/>
+	<item key="DLapplication_system-skip_rev_check" value="false"/>
+	<item key="programfpga.sdxproject" value="DLapplication_system"/>
+	<item key="DLapplication_system-microblaze_0-initElf" value="bootloop"/>
+	<item key="devices_info_Local" value="{&quot;cables&quot;:[{&quot;name&quot;:&quot;Digilent Nexys A7 -100T 210292BB2FBAA&quot;,&quot;indexContextMap&quot;:{&quot;2&quot;:&quot;jsn-Nexys A7 -100T-210292BB2FBAA-13631093-0&quot;}}]}"/>
+</section>

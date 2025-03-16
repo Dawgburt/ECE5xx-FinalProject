@@ -1,0 +1,628 @@
+12:25:20 DEBUG : Logs will be stored at 'C:/SimpleLock/DigitalLockv2Vitis/IDE.log'.
+12:25:22 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\SimpleLock\DigitalLockv2Vitis\temp_xsdb_launch_script.tcl
+12:25:22 INFO  : Registering command handlers for Vitis TCF services
+12:25:23 INFO  : Platform repository initialization has completed.
+12:25:24 INFO  : XSCT server has started successfully.
+12:25:25 INFO  : plnx-install-location is set to ''
+12:25:25 INFO  : Successfully done setting XSCT server connection channel  
+12:25:25 INFO  : Successfully done query RDI_DATADIR 
+12:25:25 INFO  : Successfully done setting workspace for the tool. 
+12:25:54 INFO  : Result from executing command 'getProjects': DLplatform
+12:25:55 INFO  : Result from executing command 'getPlatforms': xilinx_zcu102_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm
+12:28:40 INFO  : Bit file 'C:/SimpleLock/DigitalLockv2Vitis/DLapplication/_ide/bitstream/download.bit' is generated.
+12:29:02 INFO  : Bit file 'C:/SimpleLock/DigitalLockv2Vitis/DLapplication/_ide/bitstream/download.bit' is generated.
+12:29:04 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:29:04 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys A7 -100T 210292BB2FBAA" && level==0 && jtag_device_ctx=="jsn-Nexys A7 -100T-210292BB2FBAA-13631093-0"}' command is executed.
+12:29:06 INFO  : Device configured successfully with "C:/SimpleLock/DigitalLockv2Vitis/DLapplication/_ide/bitstream/download.bit"
+12:29:21 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:29:21 INFO  : Jtag cable 'Digilent Nexys A7 -100T 210292BB2FBAA' is selected.
+12:29:21 INFO  : 'jtag frequency' command is executed.
+12:29:21 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys A7 -100T 210292BB2FBAA" && level==0 && jtag_device_ctx=="jsn-Nexys A7 -100T-210292BB2FBAA-13631093-0"}' command is executed.
+12:29:23 INFO  : Device configured successfully with "C:/SimpleLock/DigitalLockv2Vitis/DLapplication/_ide/bitstream/download.bit"
+12:29:23 INFO  : Context for processor 'microblaze_0' is selected.
+12:29:23 INFO  : Hardware design and registers information is loaded from 'C:/SimpleLock/DigitalLockv2Vitis/DLplatform/export/DLplatform/hw/DLembsys.xsa'.
+12:29:23 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+12:29:23 INFO  : Context for processor 'microblaze_0' is selected.
+12:29:23 INFO  : System reset is completed.
+12:29:27 INFO  : 'after 3000' command is executed.
+12:29:27 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys A7 -100T 210292BB2FBAA" && level==0 && jtag_device_ctx=="jsn-Nexys A7 -100T-210292BB2FBAA-13631093-0"}
+fpga -file C:/SimpleLock/DigitalLockv2Vitis/DLapplication/_ide/bitstream/download.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/SimpleLock/DigitalLockv2Vitis/DLplatform/export/DLplatform/hw/DLembsys.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+----------------End of Script----------------
+
+12:29:27 INFO  : Launch script is exported to file 'C:\SimpleLock\DigitalLockv2Vitis\DLapplication_system\_ide\scripts\systemdebugger_dlapplication_system_standalone.tcl'
+12:29:34 INFO  : Disconnected from the channel tcfchan#1.
+12:29:50 INFO  : Result from executing command 'getProjects': DLplatform
+12:29:50 INFO  : Result from executing command 'getPlatforms': DLplatform|C:/SimpleLock/DigitalLockv2Vitis/DLplatform/export/DLplatform/DLplatform.xpfm;xilinx_zcu102_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm
+12:30:04 INFO  : Bit file 'C:/SimpleLock/DigitalLockv2Vitis/DLapplication/_ide/bitstream/download.bit' is generated.
+12:30:06 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:30:06 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys A7 -100T 210292BB2FBAA" && level==0 && jtag_device_ctx=="jsn-Nexys A7 -100T-210292BB2FBAA-13631093-0"}' command is executed.
+12:30:09 INFO  : Device configured successfully with "C:/SimpleLock/DigitalLockv2Vitis/DLapplication/_ide/bitstream/download.bit"
+12:30:51 INFO  : Checking for BSP changes to sync application flags for project 'DLapplication'...
+12:30:51 INFO  : Updating application flags with new BSP settings...
+12:30:51 INFO  : Successfully updated application flags for project DLapplication.
+12:30:58 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:30:58 INFO  : Jtag cable 'Digilent Nexys A7 -100T 210292BB2FBAA' is selected.
+12:30:58 INFO  : 'jtag frequency' command is executed.
+12:30:58 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys A7 -100T 210292BB2FBAA" && level==0 && jtag_device_ctx=="jsn-Nexys A7 -100T-210292BB2FBAA-13631093-0"}' command is executed.
+12:31:00 INFO  : Device configured successfully with "C:/SimpleLock/DigitalLockv2Vitis/DLapplication/_ide/bitstream/download.bit"
+12:31:00 INFO  : Context for processor 'microblaze_0' is selected.
+12:31:00 INFO  : Hardware design and registers information is loaded from 'C:/SimpleLock/DigitalLockv2Vitis/DLplatform/export/DLplatform/hw/DLembsys.xsa'.
+12:31:00 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+12:31:00 INFO  : Context for processor 'microblaze_0' is selected.
+12:31:00 INFO  : System reset is completed.
+12:31:03 INFO  : 'after 3000' command is executed.
+12:31:03 INFO  : Context for processor 'microblaze_0' is selected.
+12:31:03 INFO  : The application 'C:/SimpleLock/DigitalLockv2Vitis/DLapplication/Debug/DLapplication.elf' is downloaded to processor 'microblaze_0'.
+12:31:03 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys A7 -100T 210292BB2FBAA" && level==0 && jtag_device_ctx=="jsn-Nexys A7 -100T-210292BB2FBAA-13631093-0"}
+fpga -file C:/SimpleLock/DigitalLockv2Vitis/DLapplication/_ide/bitstream/download.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/SimpleLock/DigitalLockv2Vitis/DLplatform/export/DLplatform/hw/DLembsys.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/SimpleLock/DigitalLockv2Vitis/DLapplication/Debug/DLapplication.elf
+----------------End of Script----------------
+
+12:31:04 INFO  : Context for processor 'microblaze_0' is selected.
+12:31:04 INFO  : 'con' command is executed.
+12:31:04 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+12:31:04 INFO  : Launch script is exported to file 'C:\SimpleLock\DigitalLockv2Vitis\DLapplication_system\_ide\scripts\systemdebugger_dlapplication_system_standalone.tcl'
+12:35:37 INFO  : Checking for BSP changes to sync application flags for project 'DLapplication'...
+12:35:40 INFO  : Checking for BSP changes to sync application flags for project 'DLapplication'...
+12:35:41 INFO  : Disconnected from the channel tcfchan#3.
+12:35:41 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:35:42 INFO  : Jtag cable 'Digilent Nexys A7 -100T 210292BB2FBAA' is selected.
+12:35:42 INFO  : 'jtag frequency' command is executed.
+12:35:42 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys A7 -100T 210292BB2FBAA" && level==0 && jtag_device_ctx=="jsn-Nexys A7 -100T-210292BB2FBAA-13631093-0"}' command is executed.
+12:35:44 INFO  : Device configured successfully with "C:/SimpleLock/DigitalLockv2Vitis/DLapplication/_ide/bitstream/download.bit"
+12:35:44 INFO  : Context for processor 'microblaze_0' is selected.
+12:35:44 INFO  : Hardware design and registers information is loaded from 'C:/SimpleLock/DigitalLockv2Vitis/DLplatform/export/DLplatform/hw/DLembsys.xsa'.
+12:35:44 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+12:35:44 INFO  : Context for processor 'microblaze_0' is selected.
+12:35:44 INFO  : System reset is completed.
+12:35:47 INFO  : 'after 3000' command is executed.
+12:35:47 INFO  : Context for processor 'microblaze_0' is selected.
+12:35:47 INFO  : The application 'C:/SimpleLock/DigitalLockv2Vitis/DLapplication/Debug/DLapplication.elf' is downloaded to processor 'microblaze_0'.
+12:35:47 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys A7 -100T 210292BB2FBAA" && level==0 && jtag_device_ctx=="jsn-Nexys A7 -100T-210292BB2FBAA-13631093-0"}
+fpga -file C:/SimpleLock/DigitalLockv2Vitis/DLapplication/_ide/bitstream/download.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/SimpleLock/DigitalLockv2Vitis/DLplatform/export/DLplatform/hw/DLembsys.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/SimpleLock/DigitalLockv2Vitis/DLapplication/Debug/DLapplication.elf
+----------------End of Script----------------
+
+12:35:47 INFO  : Context for processor 'microblaze_0' is selected.
+12:35:47 INFO  : 'con' command is executed.
+12:35:47 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+12:35:47 INFO  : Launch script is exported to file 'C:\SimpleLock\DigitalLockv2Vitis\DLapplication_system\_ide\scripts\systemdebugger_dlapplication_system_standalone.tcl'
+13:24:47 INFO  : Checking for BSP changes to sync application flags for project 'DLapplication'...
+13:25:06 INFO  : Checking for BSP changes to sync application flags for project 'DLapplication'...
+13:25:31 INFO  : Checking for BSP changes to sync application flags for project 'DLapplication'...
+13:26:18 INFO  : Checking for BSP changes to sync application flags for project 'DLapplication'...
+13:26:35 INFO  : Checking for BSP changes to sync application flags for project 'DLapplication'...
+13:27:32 INFO  : Checking for BSP changes to sync application flags for project 'DLapplication'...
+13:28:07 INFO  : Checking for BSP changes to sync application flags for project 'DLapplication'...
+13:29:25 INFO  : Checking for BSP changes to sync application flags for project 'DLapplication'...
+13:29:34 INFO  : Checking for BSP changes to sync application flags for project 'DLapplication'...
+13:29:41 INFO  : Checking for BSP changes to sync application flags for project 'DLapplication'...
+13:30:11 INFO  : Checking for BSP changes to sync application flags for project 'DLapplication'...
+13:30:32 INFO  : Checking for BSP changes to sync application flags for project 'DLapplication'...
+13:31:30 INFO  : Checking for BSP changes to sync application flags for project 'DLapplication'...
+13:32:07 INFO  : Checking for BSP changes to sync application flags for project 'DLapplication'...
+13:32:42 INFO  : Checking for BSP changes to sync application flags for project 'DLapplication'...
+13:32:48 INFO  : Checking for BSP changes to sync application flags for project 'DLapplication'...
+13:33:56 INFO  : Checking for BSP changes to sync application flags for project 'DLapplication'...
+13:34:09 INFO  : Bit file 'C:/SimpleLock/DigitalLockv2Vitis/DLapplication/_ide/bitstream/download.bit' is generated.
+13:34:09 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:34:09 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys A7 -100T 210292BB2FBAA" && level==0 && jtag_device_ctx=="jsn-Nexys A7 -100T-210292BB2FBAA-13631093-0"}' command is executed.
+13:34:11 INFO  : Device configured successfully with "C:/SimpleLock/DigitalLockv2Vitis/DLapplication/_ide/bitstream/download.bit"
+13:53:26 INFO  : Disconnected from the channel tcfchan#4.
+13:53:27 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:53:27 INFO  : Jtag cable 'Digilent Nexys A7 -100T 210292BB2FBAA' is selected.
+13:53:27 INFO  : 'jtag frequency' command is executed.
+13:53:27 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys A7 -100T 210292BB2FBAA" && level==0 && jtag_device_ctx=="jsn-Nexys A7 -100T-210292BB2FBAA-13631093-0"}' command is executed.
+13:53:29 INFO  : Device configured successfully with "C:/SimpleLock/DigitalLockv2Vitis/DLapplication/_ide/bitstream/download.bit"
+13:53:29 INFO  : Context for processor 'microblaze_0' is selected.
+13:53:29 INFO  : Hardware design and registers information is loaded from 'C:/SimpleLock/DigitalLockv2Vitis/DLplatform/export/DLplatform/hw/DLembsys.xsa'.
+13:53:29 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+13:53:29 INFO  : Context for processor 'microblaze_0' is selected.
+13:53:29 INFO  : System reset is completed.
+13:53:32 INFO  : 'after 3000' command is executed.
+13:53:32 INFO  : Context for processor 'microblaze_0' is selected.
+13:53:32 INFO  : The application 'C:/SimpleLock/DigitalLockv2Vitis/DLapplication/Debug/DLapplication.elf' is downloaded to processor 'microblaze_0'.
+13:53:32 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys A7 -100T 210292BB2FBAA" && level==0 && jtag_device_ctx=="jsn-Nexys A7 -100T-210292BB2FBAA-13631093-0"}
+fpga -file C:/SimpleLock/DigitalLockv2Vitis/DLapplication/_ide/bitstream/download.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/SimpleLock/DigitalLockv2Vitis/DLplatform/export/DLplatform/hw/DLembsys.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/SimpleLock/DigitalLockv2Vitis/DLapplication/Debug/DLapplication.elf
+----------------End of Script----------------
+
+13:53:32 INFO  : Context for processor 'microblaze_0' is selected.
+13:53:32 INFO  : 'con' command is executed.
+13:53:32 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+13:53:32 INFO  : Launch script is exported to file 'C:\SimpleLock\DigitalLockv2Vitis\DLapplication_system\_ide\scripts\systemdebugger_dlapplication_system_standalone.tcl'
+14:08:33 INFO  : Checking for BSP changes to sync application flags for project 'DLapplication'...
+14:09:40 INFO  : Disconnected from the channel tcfchan#5.
+14:09:40 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:09:40 INFO  : Jtag cable 'Digilent Nexys A7 -100T 210292BB2FBAA' is selected.
+14:09:40 INFO  : 'jtag frequency' command is executed.
+14:09:40 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys A7 -100T 210292BB2FBAA" && level==0 && jtag_device_ctx=="jsn-Nexys A7 -100T-210292BB2FBAA-13631093-0"}' command is executed.
+14:09:42 INFO  : Device configured successfully with "C:/SimpleLock/DigitalLockv2Vitis/DLapplication/_ide/bitstream/download.bit"
+14:09:42 INFO  : Context for processor 'microblaze_0' is selected.
+14:09:42 INFO  : Hardware design and registers information is loaded from 'C:/SimpleLock/DigitalLockv2Vitis/DLplatform/export/DLplatform/hw/DLembsys.xsa'.
+14:09:42 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+14:09:42 INFO  : Context for processor 'microblaze_0' is selected.
+14:09:42 INFO  : System reset is completed.
+14:09:45 INFO  : 'after 3000' command is executed.
+14:09:45 INFO  : Context for processor 'microblaze_0' is selected.
+14:09:45 INFO  : The application 'C:/SimpleLock/DigitalLockv2Vitis/DLapplication/Debug/DLapplication.elf' is downloaded to processor 'microblaze_0'.
+14:09:45 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys A7 -100T 210292BB2FBAA" && level==0 && jtag_device_ctx=="jsn-Nexys A7 -100T-210292BB2FBAA-13631093-0"}
+fpga -file C:/SimpleLock/DigitalLockv2Vitis/DLapplication/_ide/bitstream/download.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/SimpleLock/DigitalLockv2Vitis/DLplatform/export/DLplatform/hw/DLembsys.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/SimpleLock/DigitalLockv2Vitis/DLapplication/Debug/DLapplication.elf
+----------------End of Script----------------
+
+14:09:45 INFO  : Context for processor 'microblaze_0' is selected.
+14:09:45 INFO  : 'con' command is executed.
+14:09:45 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+14:09:45 INFO  : Launch script is exported to file 'C:\SimpleLock\DigitalLockv2Vitis\DLapplication_system\_ide\scripts\systemdebugger_dlapplication_system_standalone.tcl'
+14:25:37 INFO  : Disconnected from the channel tcfchan#6.
+14:25:37 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:25:37 INFO  : Jtag cable 'Digilent Nexys A7 -100T 210292BB2FBAA' is selected.
+14:25:37 INFO  : 'jtag frequency' command is executed.
+14:25:37 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys A7 -100T 210292BB2FBAA" && level==0 && jtag_device_ctx=="jsn-Nexys A7 -100T-210292BB2FBAA-13631093-0"}' command is executed.
+14:25:40 INFO  : Device configured successfully with "C:/SimpleLock/DigitalLockv2Vitis/DLapplication/_ide/bitstream/download.bit"
+14:25:40 INFO  : Context for processor 'microblaze_0' is selected.
+14:25:40 INFO  : Hardware design and registers information is loaded from 'C:/SimpleLock/DigitalLockv2Vitis/DLplatform/export/DLplatform/hw/DLembsys.xsa'.
+14:25:40 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+14:25:40 INFO  : Context for processor 'microblaze_0' is selected.
+14:25:40 INFO  : System reset is completed.
+14:25:43 INFO  : 'after 3000' command is executed.
+14:25:43 INFO  : Context for processor 'microblaze_0' is selected.
+14:25:43 INFO  : The application 'C:/SimpleLock/DigitalLockv2Vitis/DLapplication/Debug/DLapplication.elf' is downloaded to processor 'microblaze_0'.
+14:25:43 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys A7 -100T 210292BB2FBAA" && level==0 && jtag_device_ctx=="jsn-Nexys A7 -100T-210292BB2FBAA-13631093-0"}
+fpga -file C:/SimpleLock/DigitalLockv2Vitis/DLapplication/_ide/bitstream/download.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/SimpleLock/DigitalLockv2Vitis/DLplatform/export/DLplatform/hw/DLembsys.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/SimpleLock/DigitalLockv2Vitis/DLapplication/Debug/DLapplication.elf
+----------------End of Script----------------
+
+14:25:43 INFO  : Context for processor 'microblaze_0' is selected.
+14:25:43 INFO  : 'con' command is executed.
+14:25:43 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+14:25:43 INFO  : Launch script is exported to file 'C:\SimpleLock\DigitalLockv2Vitis\DLapplication_system\_ide\scripts\systemdebugger_dlapplication_system_standalone.tcl'
+14:54:27 INFO  : Checking for BSP changes to sync application flags for project 'DLapplication'...
+14:55:59 INFO  : Checking for BSP changes to sync application flags for project 'DLapplication'...
+14:56:02 INFO  : Disconnected from the channel tcfchan#7.
+14:56:02 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:56:02 INFO  : Jtag cable 'Digilent Nexys A7 -100T 210292BB2FBAA' is selected.
+14:56:02 INFO  : 'jtag frequency' command is executed.
+14:56:02 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys A7 -100T 210292BB2FBAA" && level==0 && jtag_device_ctx=="jsn-Nexys A7 -100T-210292BB2FBAA-13631093-0"}' command is executed.
+14:56:04 INFO  : Device configured successfully with "C:/SimpleLock/DigitalLockv2Vitis/DLapplication/_ide/bitstream/download.bit"
+14:56:04 INFO  : Context for processor 'microblaze_0' is selected.
+14:56:04 INFO  : Hardware design and registers information is loaded from 'C:/SimpleLock/DigitalLockv2Vitis/DLplatform/export/DLplatform/hw/DLembsys.xsa'.
+14:56:04 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+14:56:04 INFO  : Context for processor 'microblaze_0' is selected.
+14:56:04 INFO  : System reset is completed.
+14:56:07 INFO  : 'after 3000' command is executed.
+14:56:07 INFO  : Context for processor 'microblaze_0' is selected.
+14:56:07 INFO  : The application 'C:/SimpleLock/DigitalLockv2Vitis/DLapplication/Debug/DLapplication.elf' is downloaded to processor 'microblaze_0'.
+14:56:07 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys A7 -100T 210292BB2FBAA" && level==0 && jtag_device_ctx=="jsn-Nexys A7 -100T-210292BB2FBAA-13631093-0"}
+fpga -file C:/SimpleLock/DigitalLockv2Vitis/DLapplication/_ide/bitstream/download.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/SimpleLock/DigitalLockv2Vitis/DLplatform/export/DLplatform/hw/DLembsys.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/SimpleLock/DigitalLockv2Vitis/DLapplication/Debug/DLapplication.elf
+----------------End of Script----------------
+
+14:56:08 INFO  : Context for processor 'microblaze_0' is selected.
+14:56:08 INFO  : 'con' command is executed.
+14:56:08 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+14:56:08 INFO  : Launch script is exported to file 'C:\SimpleLock\DigitalLockv2Vitis\DLapplication_system\_ide\scripts\systemdebugger_dlapplication_system_standalone.tcl'
+14:56:22 INFO  : Disconnected from the channel tcfchan#8.
+14:56:22 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:56:22 INFO  : Jtag cable 'Digilent Nexys A7 -100T 210292BB2FBAA' is selected.
+14:56:22 INFO  : 'jtag frequency' command is executed.
+14:56:22 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys A7 -100T 210292BB2FBAA" && level==0 && jtag_device_ctx=="jsn-Nexys A7 -100T-210292BB2FBAA-13631093-0"}' command is executed.
+14:56:24 INFO  : Device configured successfully with "C:/SimpleLock/DigitalLockv2Vitis/DLapplication/_ide/bitstream/download.bit"
+14:56:24 INFO  : Context for processor 'microblaze_0' is selected.
+14:56:24 INFO  : Hardware design and registers information is loaded from 'C:/SimpleLock/DigitalLockv2Vitis/DLplatform/export/DLplatform/hw/DLembsys.xsa'.
+14:56:24 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+14:56:24 INFO  : Context for processor 'microblaze_0' is selected.
+14:56:24 INFO  : System reset is completed.
+14:56:27 INFO  : 'after 3000' command is executed.
+14:56:28 INFO  : Context for processor 'microblaze_0' is selected.
+14:56:28 INFO  : The application 'C:/SimpleLock/DigitalLockv2Vitis/DLapplication/Debug/DLapplication.elf' is downloaded to processor 'microblaze_0'.
+14:56:28 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys A7 -100T 210292BB2FBAA" && level==0 && jtag_device_ctx=="jsn-Nexys A7 -100T-210292BB2FBAA-13631093-0"}
+fpga -file C:/SimpleLock/DigitalLockv2Vitis/DLapplication/_ide/bitstream/download.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/SimpleLock/DigitalLockv2Vitis/DLplatform/export/DLplatform/hw/DLembsys.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/SimpleLock/DigitalLockv2Vitis/DLapplication/Debug/DLapplication.elf
+----------------End of Script----------------
+
+14:56:28 INFO  : Context for processor 'microblaze_0' is selected.
+14:56:28 INFO  : 'con' command is executed.
+14:56:28 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+14:56:28 INFO  : Launch script is exported to file 'C:\SimpleLock\DigitalLockv2Vitis\DLapplication_system\_ide\scripts\systemdebugger_dlapplication_system_standalone.tcl'
+14:56:59 INFO  : Checking for BSP changes to sync application flags for project 'DLapplication'...
+14:57:01 INFO  : Disconnected from the channel tcfchan#9.
+14:57:01 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:57:01 INFO  : Jtag cable 'Digilent Nexys A7 -100T 210292BB2FBAA' is selected.
+14:57:01 INFO  : 'jtag frequency' command is executed.
+14:57:01 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys A7 -100T 210292BB2FBAA" && level==0 && jtag_device_ctx=="jsn-Nexys A7 -100T-210292BB2FBAA-13631093-0"}' command is executed.
+14:57:04 INFO  : Device configured successfully with "C:/SimpleLock/DigitalLockv2Vitis/DLapplication/_ide/bitstream/download.bit"
+14:57:04 INFO  : Context for processor 'microblaze_0' is selected.
+14:57:04 INFO  : Hardware design and registers information is loaded from 'C:/SimpleLock/DigitalLockv2Vitis/DLplatform/export/DLplatform/hw/DLembsys.xsa'.
+14:57:04 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+14:57:04 INFO  : Context for processor 'microblaze_0' is selected.
+14:57:04 INFO  : System reset is completed.
+14:57:07 INFO  : 'after 3000' command is executed.
+14:57:07 INFO  : Context for processor 'microblaze_0' is selected.
+14:57:07 INFO  : The application 'C:/SimpleLock/DigitalLockv2Vitis/DLapplication/Debug/DLapplication.elf' is downloaded to processor 'microblaze_0'.
+14:57:07 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys A7 -100T 210292BB2FBAA" && level==0 && jtag_device_ctx=="jsn-Nexys A7 -100T-210292BB2FBAA-13631093-0"}
+fpga -file C:/SimpleLock/DigitalLockv2Vitis/DLapplication/_ide/bitstream/download.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/SimpleLock/DigitalLockv2Vitis/DLplatform/export/DLplatform/hw/DLembsys.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/SimpleLock/DigitalLockv2Vitis/DLapplication/Debug/DLapplication.elf
+----------------End of Script----------------
+
+14:57:07 INFO  : Context for processor 'microblaze_0' is selected.
+14:57:07 INFO  : 'con' command is executed.
+14:57:07 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+14:57:07 INFO  : Launch script is exported to file 'C:\SimpleLock\DigitalLockv2Vitis\DLapplication_system\_ide\scripts\systemdebugger_dlapplication_system_standalone.tcl'
+14:57:28 INFO  : Checking for BSP changes to sync application flags for project 'DLapplication'...
+14:57:30 INFO  : Disconnected from the channel tcfchan#10.
+14:57:30 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:57:30 INFO  : Jtag cable 'Digilent Nexys A7 -100T 210292BB2FBAA' is selected.
+14:57:30 INFO  : 'jtag frequency' command is executed.
+14:57:31 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys A7 -100T 210292BB2FBAA" && level==0 && jtag_device_ctx=="jsn-Nexys A7 -100T-210292BB2FBAA-13631093-0"}' command is executed.
+14:57:33 INFO  : Device configured successfully with "C:/SimpleLock/DigitalLockv2Vitis/DLapplication/_ide/bitstream/download.bit"
+14:57:33 INFO  : Context for processor 'microblaze_0' is selected.
+14:57:33 INFO  : Hardware design and registers information is loaded from 'C:/SimpleLock/DigitalLockv2Vitis/DLplatform/export/DLplatform/hw/DLembsys.xsa'.
+14:57:33 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+14:57:33 INFO  : Context for processor 'microblaze_0' is selected.
+14:57:33 INFO  : System reset is completed.
+14:57:36 INFO  : 'after 3000' command is executed.
+14:57:36 INFO  : Context for processor 'microblaze_0' is selected.
+14:57:36 INFO  : The application 'C:/SimpleLock/DigitalLockv2Vitis/DLapplication/Debug/DLapplication.elf' is downloaded to processor 'microblaze_0'.
+14:57:36 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys A7 -100T 210292BB2FBAA" && level==0 && jtag_device_ctx=="jsn-Nexys A7 -100T-210292BB2FBAA-13631093-0"}
+fpga -file C:/SimpleLock/DigitalLockv2Vitis/DLapplication/_ide/bitstream/download.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/SimpleLock/DigitalLockv2Vitis/DLplatform/export/DLplatform/hw/DLembsys.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/SimpleLock/DigitalLockv2Vitis/DLapplication/Debug/DLapplication.elf
+----------------End of Script----------------
+
+14:57:36 INFO  : Context for processor 'microblaze_0' is selected.
+14:57:36 INFO  : 'con' command is executed.
+14:57:36 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+14:57:36 INFO  : Launch script is exported to file 'C:\SimpleLock\DigitalLockv2Vitis\DLapplication_system\_ide\scripts\systemdebugger_dlapplication_system_standalone.tcl'
+14:57:54 INFO  : Checking for BSP changes to sync application flags for project 'DLapplication'...
+14:58:14 INFO  : Result from executing command 'removePlatformRepo': 
+14:58:18 INFO  : Result from executing command 'getProjects': DLplatform
+14:58:18 INFO  : Result from executing command 'getPlatforms': xilinx_zcu102_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm
+14:58:18 INFO  : Checking for BSP changes to sync application flags for project 'DLapplication'...
+14:58:21 INFO  : Disconnected from the channel tcfchan#11.
+14:58:21 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:58:21 INFO  : Jtag cable 'Digilent Nexys A7 -100T 210292BB2FBAA' is selected.
+14:58:21 INFO  : 'jtag frequency' command is executed.
+14:58:21 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys A7 -100T 210292BB2FBAA" && level==0 && jtag_device_ctx=="jsn-Nexys A7 -100T-210292BB2FBAA-13631093-0"}' command is executed.
+14:58:24 INFO  : Device configured successfully with "C:/SimpleLock/DigitalLockv2Vitis/DLapplication/_ide/bitstream/download.bit"
+14:58:24 INFO  : Context for processor 'microblaze_0' is selected.
+14:58:24 INFO  : Hardware design and registers information is loaded from 'C:/SimpleLock/DigitalLockv2Vitis/DLplatform/export/DLplatform/hw/DLembsys.xsa'.
+14:58:24 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+14:58:24 INFO  : Context for processor 'microblaze_0' is selected.
+14:58:24 INFO  : System reset is completed.
+14:58:27 INFO  : 'after 3000' command is executed.
+14:58:27 INFO  : Context for processor 'microblaze_0' is selected.
+14:58:27 INFO  : The application 'C:/SimpleLock/DigitalLockv2Vitis/DLapplication/Debug/DLapplication.elf' is downloaded to processor 'microblaze_0'.
+14:58:27 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys A7 -100T 210292BB2FBAA" && level==0 && jtag_device_ctx=="jsn-Nexys A7 -100T-210292BB2FBAA-13631093-0"}
+fpga -file C:/SimpleLock/DigitalLockv2Vitis/DLapplication/_ide/bitstream/download.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/SimpleLock/DigitalLockv2Vitis/DLplatform/export/DLplatform/hw/DLembsys.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/SimpleLock/DigitalLockv2Vitis/DLapplication/Debug/DLapplication.elf
+----------------End of Script----------------
+
+14:58:27 INFO  : Context for processor 'microblaze_0' is selected.
+14:58:27 INFO  : 'con' command is executed.
+14:58:27 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+14:58:27 INFO  : Launch script is exported to file 'C:\SimpleLock\DigitalLockv2Vitis\DLapplication_system\_ide\scripts\systemdebugger_dlapplication_system_standalone.tcl'
+14:58:37 INFO  : Disconnected from the channel tcfchan#14.
+14:58:37 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:58:37 INFO  : Jtag cable 'Digilent Nexys A7 -100T 210292BB2FBAA' is selected.
+14:58:37 INFO  : 'jtag frequency' command is executed.
+14:58:37 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys A7 -100T 210292BB2FBAA" && level==0 && jtag_device_ctx=="jsn-Nexys A7 -100T-210292BB2FBAA-13631093-0"}' command is executed.
+14:58:39 INFO  : Device configured successfully with "C:/SimpleLock/DigitalLockv2Vitis/DLapplication/_ide/bitstream/download.bit"
+14:58:40 INFO  : Context for processor 'microblaze_0' is selected.
+14:58:40 INFO  : Hardware design and registers information is loaded from 'C:/SimpleLock/DigitalLockv2Vitis/DLplatform/export/DLplatform/hw/DLembsys.xsa'.
+14:58:40 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+14:58:40 INFO  : Context for processor 'microblaze_0' is selected.
+14:58:40 INFO  : System reset is completed.
+14:58:43 INFO  : 'after 3000' command is executed.
+14:58:43 INFO  : Context for processor 'microblaze_0' is selected.
+14:58:43 INFO  : The application 'C:/SimpleLock/DigitalLockv2Vitis/DLapplication/Debug/DLapplication.elf' is downloaded to processor 'microblaze_0'.
+14:58:43 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys A7 -100T 210292BB2FBAA" && level==0 && jtag_device_ctx=="jsn-Nexys A7 -100T-210292BB2FBAA-13631093-0"}
+fpga -file C:/SimpleLock/DigitalLockv2Vitis/DLapplication/_ide/bitstream/download.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/SimpleLock/DigitalLockv2Vitis/DLplatform/export/DLplatform/hw/DLembsys.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/SimpleLock/DigitalLockv2Vitis/DLapplication/Debug/DLapplication.elf
+----------------End of Script----------------
+
+14:58:43 INFO  : Context for processor 'microblaze_0' is selected.
+14:58:43 INFO  : 'con' command is executed.
+14:58:43 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+14:58:43 INFO  : Launch script is exported to file 'C:\SimpleLock\DigitalLockv2Vitis\DLapplication_system\_ide\scripts\systemdebugger_dlapplication_system_standalone.tcl'
+14:58:52 INFO  : Bit file 'C:/SimpleLock/DigitalLockv2Vitis/DLapplication/_ide/bitstream/download.bit' is generated.
+14:58:52 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:58:52 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys A7 -100T 210292BB2FBAA" && level==0 && jtag_device_ctx=="jsn-Nexys A7 -100T-210292BB2FBAA-13631093-0"}' command is executed.
+14:58:55 INFO  : Device configured successfully with "C:/SimpleLock/DigitalLockv2Vitis/DLapplication/_ide/bitstream/download.bit"
+14:59:01 INFO  : Disconnected from the channel tcfchan#15.
+14:59:01 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:59:01 INFO  : Jtag cable 'Digilent Nexys A7 -100T 210292BB2FBAA' is selected.
+14:59:01 INFO  : 'jtag frequency' command is executed.
+14:59:01 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys A7 -100T 210292BB2FBAA" && level==0 && jtag_device_ctx=="jsn-Nexys A7 -100T-210292BB2FBAA-13631093-0"}' command is executed.
+14:59:04 INFO  : Device configured successfully with "C:/SimpleLock/DigitalLockv2Vitis/DLapplication/_ide/bitstream/download.bit"
+14:59:04 INFO  : Context for processor 'microblaze_0' is selected.
+14:59:04 INFO  : Hardware design and registers information is loaded from 'C:/SimpleLock/DigitalLockv2Vitis/DLplatform/export/DLplatform/hw/DLembsys.xsa'.
+14:59:04 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+14:59:04 INFO  : Context for processor 'microblaze_0' is selected.
+14:59:04 INFO  : System reset is completed.
+14:59:07 INFO  : 'after 3000' command is executed.
+14:59:07 INFO  : Context for processor 'microblaze_0' is selected.
+14:59:07 INFO  : The application 'C:/SimpleLock/DigitalLockv2Vitis/DLapplication/Debug/DLapplication.elf' is downloaded to processor 'microblaze_0'.
+14:59:07 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys A7 -100T 210292BB2FBAA" && level==0 && jtag_device_ctx=="jsn-Nexys A7 -100T-210292BB2FBAA-13631093-0"}
+fpga -file C:/SimpleLock/DigitalLockv2Vitis/DLapplication/_ide/bitstream/download.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/SimpleLock/DigitalLockv2Vitis/DLplatform/export/DLplatform/hw/DLembsys.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/SimpleLock/DigitalLockv2Vitis/DLapplication/Debug/DLapplication.elf
+----------------End of Script----------------
+
+14:59:07 INFO  : Context for processor 'microblaze_0' is selected.
+14:59:07 INFO  : 'con' command is executed.
+14:59:07 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+14:59:07 INFO  : Launch script is exported to file 'C:\SimpleLock\DigitalLockv2Vitis\DLapplication_system\_ide\scripts\systemdebugger_dlapplication_system_standalone.tcl'
+14:59:12 INFO  : Disconnected from the channel tcfchan#16.
+14:59:12 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:59:13 INFO  : Jtag cable 'Digilent Nexys A7 -100T 210292BB2FBAA' is selected.
+14:59:13 INFO  : 'jtag frequency' command is executed.
+14:59:13 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys A7 -100T 210292BB2FBAA" && level==0 && jtag_device_ctx=="jsn-Nexys A7 -100T-210292BB2FBAA-13631093-0"}' command is executed.
+14:59:15 INFO  : Device configured successfully with "C:/SimpleLock/DigitalLockv2Vitis/DLapplication/_ide/bitstream/download.bit"
+14:59:15 INFO  : Context for processor 'microblaze_0' is selected.
+14:59:15 INFO  : Hardware design and registers information is loaded from 'C:/SimpleLock/DigitalLockv2Vitis/DLplatform/export/DLplatform/hw/DLembsys.xsa'.
+14:59:15 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+14:59:15 INFO  : Context for processor 'microblaze_0' is selected.
+14:59:15 INFO  : System reset is completed.
+14:59:18 INFO  : 'after 3000' command is executed.
+14:59:18 INFO  : Context for processor 'microblaze_0' is selected.
+14:59:18 INFO  : The application 'C:/SimpleLock/DigitalLockv2Vitis/DLapplication/Debug/DLapplication.elf' is downloaded to processor 'microblaze_0'.
+14:59:18 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys A7 -100T 210292BB2FBAA" && level==0 && jtag_device_ctx=="jsn-Nexys A7 -100T-210292BB2FBAA-13631093-0"}
+fpga -file C:/SimpleLock/DigitalLockv2Vitis/DLapplication/_ide/bitstream/download.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/SimpleLock/DigitalLockv2Vitis/DLplatform/export/DLplatform/hw/DLembsys.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/SimpleLock/DigitalLockv2Vitis/DLapplication/Debug/DLapplication.elf
+----------------End of Script----------------
+
+14:59:18 INFO  : Context for processor 'microblaze_0' is selected.
+14:59:18 INFO  : 'con' command is executed.
+14:59:18 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+14:59:18 INFO  : Launch script is exported to file 'C:\SimpleLock\DigitalLockv2Vitis\DLapplication_system\_ide\scripts\systemdebugger_dlapplication_system_standalone.tcl'
+14:59:31 INFO  : Disconnected from the channel tcfchan#17.
+14:59:31 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:59:31 INFO  : Jtag cable 'Digilent Nexys A7 -100T 210292BB2FBAA' is selected.
+14:59:31 INFO  : 'jtag frequency' command is executed.
+14:59:31 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys A7 -100T 210292BB2FBAA" && level==0 && jtag_device_ctx=="jsn-Nexys A7 -100T-210292BB2FBAA-13631093-0"}' command is executed.
+14:59:34 INFO  : Device configured successfully with "C:/SimpleLock/DigitalLockv2Vitis/DLapplication/_ide/bitstream/download.bit"
+14:59:34 INFO  : Context for processor 'microblaze_0' is selected.
+14:59:34 INFO  : Hardware design and registers information is loaded from 'C:/SimpleLock/DigitalLockv2Vitis/DLplatform/export/DLplatform/hw/DLembsys.xsa'.
+14:59:34 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+14:59:34 INFO  : Context for processor 'microblaze_0' is selected.
+14:59:34 INFO  : System reset is completed.
+14:59:37 INFO  : 'after 3000' command is executed.
+14:59:37 INFO  : Context for processor 'microblaze_0' is selected.
+14:59:37 INFO  : The application 'C:/SimpleLock/DigitalLockv2Vitis/DLapplication/Debug/DLapplication.elf' is downloaded to processor 'microblaze_0'.
+14:59:37 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys A7 -100T 210292BB2FBAA" && level==0 && jtag_device_ctx=="jsn-Nexys A7 -100T-210292BB2FBAA-13631093-0"}
+fpga -file C:/SimpleLock/DigitalLockv2Vitis/DLapplication/_ide/bitstream/download.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/SimpleLock/DigitalLockv2Vitis/DLplatform/export/DLplatform/hw/DLembsys.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/SimpleLock/DigitalLockv2Vitis/DLapplication/Debug/DLapplication.elf
+----------------End of Script----------------
+
+14:59:37 INFO  : Context for processor 'microblaze_0' is selected.
+14:59:37 INFO  : 'con' command is executed.
+14:59:37 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+14:59:37 INFO  : Launch script is exported to file 'C:\SimpleLock\DigitalLockv2Vitis\DLapplication_system\_ide\scripts\systemdebugger_dlapplication_system_standalone.tcl'
+15:52:00 INFO  : Checking for BSP changes to sync application flags for project 'DLapplication'...
+15:54:59 INFO  : Disconnected from the channel tcfchan#18.
+15:54:59 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:54:59 INFO  : Jtag cable 'Digilent Nexys A7 -100T 210292BB2FBAA' is selected.
+15:54:59 INFO  : 'jtag frequency' command is executed.
+15:54:59 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys A7 -100T 210292BB2FBAA" && level==0 && jtag_device_ctx=="jsn-Nexys A7 -100T-210292BB2FBAA-13631093-0"}' command is executed.
+15:55:01 INFO  : Device configured successfully with "C:/SimpleLock/DigitalLockv2Vitis/DLapplication/_ide/bitstream/download.bit"
+15:55:01 INFO  : Context for processor 'microblaze_0' is selected.
+15:55:01 INFO  : Hardware design and registers information is loaded from 'C:/SimpleLock/DigitalLockv2Vitis/DLplatform/export/DLplatform/hw/DLembsys.xsa'.
+15:55:01 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+15:55:01 INFO  : Context for processor 'microblaze_0' is selected.
+15:55:01 INFO  : System reset is completed.
+15:55:04 INFO  : 'after 3000' command is executed.
+15:55:04 INFO  : Context for processor 'microblaze_0' is selected.
+15:55:04 INFO  : The application 'C:/SimpleLock/DigitalLockv2Vitis/DLapplication/Debug/DLapplication.elf' is downloaded to processor 'microblaze_0'.
+15:55:04 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys A7 -100T 210292BB2FBAA" && level==0 && jtag_device_ctx=="jsn-Nexys A7 -100T-210292BB2FBAA-13631093-0"}
+fpga -file C:/SimpleLock/DigitalLockv2Vitis/DLapplication/_ide/bitstream/download.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/SimpleLock/DigitalLockv2Vitis/DLplatform/export/DLplatform/hw/DLembsys.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/SimpleLock/DigitalLockv2Vitis/DLapplication/Debug/DLapplication.elf
+----------------End of Script----------------
+
+15:55:04 INFO  : Context for processor 'microblaze_0' is selected.
+15:55:04 INFO  : 'con' command is executed.
+15:55:04 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+15:55:04 INFO  : Launch script is exported to file 'C:\SimpleLock\DigitalLockv2Vitis\DLapplication_system\_ide\scripts\systemdebugger_dlapplication_system_standalone.tcl'
+16:18:47 INFO  : Disconnected from the channel tcfchan#19.

@@ -1,0 +1,482 @@
+
+*** Running vivado
+    with args -log dlembsys_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source dlembsys_wrapper.tcl
+
+
+
+****** Vivado v2022.2 (64-bit)
+  **** SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source dlembsys_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.2/data/ip'.
+Command: read_checkpoint -auto_incremental -incremental C:/SimpleLock/DigitalLockv2/DigitalLockv2.srcs/utils_1/imports/synth_1/dlembsys_wrapper.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/SimpleLock/DigitalLockv2/DigitalLockv2.srcs/utils_1/imports/synth_1/dlembsys_wrapper.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top dlembsys_wrapper -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 7068
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1265.930 ; gain = 407.156
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'dlembsys_wrapper' [c:/SimpleLock/DigitalLockv2/DigitalLockv2.gen/sources_1/bd/dlembsys/hdl/dlembsys_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'dlembsys' [c:/SimpleLock/DigitalLockv2/DigitalLockv2.gen/sources_1/bd/dlembsys/synth/dlembsys.v:12]
+INFO: [Synth 8-6157] synthesizing module 'dlembsys_axi_bram_ctrl_0_0' [C:/SimpleLock/DigitalLockv2/DigitalLockv2.runs/synth_1/.Xil/Vivado-42736-Dawgburts-Mothership/realtime/dlembsys_axi_bram_ctrl_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'dlembsys_axi_bram_ctrl_0_0' (0#1) [C:/SimpleLock/DigitalLockv2/DigitalLockv2.runs/synth_1/.Xil/Vivado-42736-Dawgburts-Mothership/realtime/dlembsys_axi_bram_ctrl_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'dlembsys_axi_bram_ctrl_0_bram_0' [C:/SimpleLock/DigitalLockv2/DigitalLockv2.runs/synth_1/.Xil/Vivado-42736-Dawgburts-Mothership/realtime/dlembsys_axi_bram_ctrl_0_bram_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'dlembsys_axi_bram_ctrl_0_bram_0' (0#1) [C:/SimpleLock/DigitalLockv2/DigitalLockv2.runs/synth_1/.Xil/Vivado-42736-Dawgburts-Mothership/realtime/dlembsys_axi_bram_ctrl_0_bram_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'rsta_busy' of module 'dlembsys_axi_bram_ctrl_0_bram_0' is unconnected for instance 'axi_bram_ctrl_0_bram' [c:/SimpleLock/DigitalLockv2/DigitalLockv2.gen/sources_1/bd/dlembsys/synth/dlembsys.v:264]
+WARNING: [Synth 8-7071] port 'rstb_busy' of module 'dlembsys_axi_bram_ctrl_0_bram_0' is unconnected for instance 'axi_bram_ctrl_0_bram' [c:/SimpleLock/DigitalLockv2/DigitalLockv2.gen/sources_1/bd/dlembsys/synth/dlembsys.v:264]
+WARNING: [Synth 8-7023] instance 'axi_bram_ctrl_0_bram' of module 'dlembsys_axi_bram_ctrl_0_bram_0' has 16 connections declared, but only 14 given [c:/SimpleLock/DigitalLockv2/DigitalLockv2.gen/sources_1/bd/dlembsys/synth/dlembsys.v:264]
+INFO: [Synth 8-6157] synthesizing module 'dlembsys_axi_uartlite_0_1' [C:/SimpleLock/DigitalLockv2/DigitalLockv2.runs/synth_1/.Xil/Vivado-42736-Dawgburts-Mothership/realtime/dlembsys_axi_uartlite_0_1_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'dlembsys_axi_uartlite_0_1' (0#1) [C:/SimpleLock/DigitalLockv2/DigitalLockv2.runs/synth_1/.Xil/Vivado-42736-Dawgburts-Mothership/realtime/dlembsys_axi_uartlite_0_1_stub.v:5]
+WARNING: [Synth 8-7071] port 'interrupt' of module 'dlembsys_axi_uartlite_0_1' is unconnected for instance 'axi_uartlite_0' [c:/SimpleLock/DigitalLockv2/DigitalLockv2.gen/sources_1/bd/dlembsys/synth/dlembsys.v:279]
+WARNING: [Synth 8-7023] instance 'axi_uartlite_0' of module 'dlembsys_axi_uartlite_0_1' has 22 connections declared, but only 21 given [c:/SimpleLock/DigitalLockv2/DigitalLockv2.gen/sources_1/bd/dlembsys/synth/dlembsys.v:279]
+INFO: [Synth 8-6157] synthesizing module 'dlembsys_clk_wiz_1_0' [C:/SimpleLock/DigitalLockv2/DigitalLockv2.runs/synth_1/.Xil/Vivado-42736-Dawgburts-Mothership/realtime/dlembsys_clk_wiz_1_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'dlembsys_clk_wiz_1_0' (0#1) [C:/SimpleLock/DigitalLockv2/DigitalLockv2.runs/synth_1/.Xil/Vivado-42736-Dawgburts-Mothership/realtime/dlembsys_clk_wiz_1_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'dlembsys_mdm_1_0' [C:/SimpleLock/DigitalLockv2/DigitalLockv2.runs/synth_1/.Xil/Vivado-42736-Dawgburts-Mothership/realtime/dlembsys_mdm_1_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'dlembsys_mdm_1_0' (0#1) [C:/SimpleLock/DigitalLockv2/DigitalLockv2.runs/synth_1/.Xil/Vivado-42736-Dawgburts-Mothership/realtime/dlembsys_mdm_1_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'Interrupt' of module 'dlembsys_mdm_1_0' is unconnected for instance 'mdm_1' [c:/SimpleLock/DigitalLockv2/DigitalLockv2.gen/sources_1/bd/dlembsys/synth/dlembsys.v:306]
+WARNING: [Synth 8-7023] instance 'mdm_1' of module 'dlembsys_mdm_1_0' has 30 connections declared, but only 29 given [c:/SimpleLock/DigitalLockv2/DigitalLockv2.gen/sources_1/bd/dlembsys/synth/dlembsys.v:306]
+INFO: [Synth 8-6157] synthesizing module 'dlembsys_microblaze_0_0' [C:/SimpleLock/DigitalLockv2/DigitalLockv2.runs/synth_1/.Xil/Vivado-42736-Dawgburts-Mothership/realtime/dlembsys_microblaze_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'dlembsys_microblaze_0_0' (0#1) [C:/SimpleLock/DigitalLockv2/DigitalLockv2.runs/synth_1/.Xil/Vivado-42736-Dawgburts-Mothership/realtime/dlembsys_microblaze_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'Interrupt_Ack' of module 'dlembsys_microblaze_0_0' is unconnected for instance 'microblaze_0' [c:/SimpleLock/DigitalLockv2/DigitalLockv2.gen/sources_1/bd/dlembsys/synth/dlembsys.v:338]
+WARNING: [Synth 8-7023] instance 'microblaze_0' of module 'dlembsys_microblaze_0_0' has 89 connections declared, but only 88 given [c:/SimpleLock/DigitalLockv2/DigitalLockv2.gen/sources_1/bd/dlembsys/synth/dlembsys.v:338]
+INFO: [Synth 8-6157] synthesizing module 'dlembsys_microblaze_0_axi_periph_0' [c:/SimpleLock/DigitalLockv2/DigitalLockv2.gen/sources_1/bd/dlembsys/synth/dlembsys.v:601]
+INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_1MB2BLS' [c:/SimpleLock/DigitalLockv2/DigitalLockv2.gen/sources_1/bd/dlembsys/synth/dlembsys.v:1735]
+INFO: [Synth 8-6157] synthesizing module 'dlembsys_auto_pc_0' [C:/SimpleLock/DigitalLockv2/DigitalLockv2.runs/synth_1/.Xil/Vivado-42736-Dawgburts-Mothership/realtime/dlembsys_auto_pc_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'dlembsys_auto_pc_0' (0#1) [C:/SimpleLock/DigitalLockv2/DigitalLockv2.runs/synth_1/.Xil/Vivado-42736-Dawgburts-Mothership/realtime/dlembsys_auto_pc_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'dlembsys_auto_pc_0' is unconnected for instance 'auto_pc' [c:/SimpleLock/DigitalLockv2/DigitalLockv2.gen/sources_1/bd/dlembsys/synth/dlembsys.v:1974]
+WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'dlembsys_auto_pc_0' is unconnected for instance 'auto_pc' [c:/SimpleLock/DigitalLockv2/DigitalLockv2.gen/sources_1/bd/dlembsys/synth/dlembsys.v:1974]
+WARNING: [Synth 8-7023] instance 'auto_pc' of module 'dlembsys_auto_pc_0' has 60 connections declared, but only 58 given [c:/SimpleLock/DigitalLockv2/DigitalLockv2.gen/sources_1/bd/dlembsys/synth/dlembsys.v:1974]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_1MB2BLS' (0#1) [c:/SimpleLock/DigitalLockv2/DigitalLockv2.gen/sources_1/bd/dlembsys/synth/dlembsys.v:1735]
+INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_H1X1UP' [c:/SimpleLock/DigitalLockv2/DigitalLockv2.gen/sources_1/bd/dlembsys/synth/dlembsys.v:2035]
+INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_H1X1UP' (0#1) [c:/SimpleLock/DigitalLockv2/DigitalLockv2.gen/sources_1/bd/dlembsys/synth/dlembsys.v:2035]
+INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_1NWYZ0J' [c:/SimpleLock/DigitalLockv2/DigitalLockv2.gen/sources_1/bd/dlembsys/synth/dlembsys.v:2293]
+INFO: [Synth 8-6157] synthesizing module 'dlembsys_auto_pc_1' [C:/SimpleLock/DigitalLockv2/DigitalLockv2.runs/synth_1/.Xil/Vivado-42736-Dawgburts-Mothership/realtime/dlembsys_auto_pc_1_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'dlembsys_auto_pc_1' (0#1) [C:/SimpleLock/DigitalLockv2/DigitalLockv2.runs/synth_1/.Xil/Vivado-42736-Dawgburts-Mothership/realtime/dlembsys_auto_pc_1_stub.v:5]
+WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'dlembsys_auto_pc_1' is unconnected for instance 'auto_pc' [c:/SimpleLock/DigitalLockv2/DigitalLockv2.gen/sources_1/bd/dlembsys/synth/dlembsys.v:2532]
+WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'dlembsys_auto_pc_1' is unconnected for instance 'auto_pc' [c:/SimpleLock/DigitalLockv2/DigitalLockv2.gen/sources_1/bd/dlembsys/synth/dlembsys.v:2532]
+WARNING: [Synth 8-7023] instance 'auto_pc' of module 'dlembsys_auto_pc_1' has 60 connections declared, but only 58 given [c:/SimpleLock/DigitalLockv2/DigitalLockv2.gen/sources_1/bd/dlembsys/synth/dlembsys.v:2532]
+INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_1NWYZ0J' (0#1) [c:/SimpleLock/DigitalLockv2/DigitalLockv2.gen/sources_1/bd/dlembsys/synth/dlembsys.v:2293]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_BYJK02' [c:/SimpleLock/DigitalLockv2/DigitalLockv2.gen/sources_1/bd/dlembsys/synth/dlembsys.v:2827]
+INFO: [Synth 8-6157] synthesizing module 'dlembsys_auto_pc_2' [C:/SimpleLock/DigitalLockv2/DigitalLockv2.runs/synth_1/.Xil/Vivado-42736-Dawgburts-Mothership/realtime/dlembsys_auto_pc_2_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'dlembsys_auto_pc_2' (0#1) [C:/SimpleLock/DigitalLockv2/DigitalLockv2.runs/synth_1/.Xil/Vivado-42736-Dawgburts-Mothership/realtime/dlembsys_auto_pc_2_stub.v:5]
+WARNING: [Synth 8-7071] port 'm_axi_awregion' of module 'dlembsys_auto_pc_2' is unconnected for instance 'auto_pc' [c:/SimpleLock/DigitalLockv2/DigitalLockv2.gen/sources_1/bd/dlembsys/synth/dlembsys.v:3050]
+WARNING: [Synth 8-7071] port 'm_axi_arregion' of module 'dlembsys_auto_pc_2' is unconnected for instance 'auto_pc' [c:/SimpleLock/DigitalLockv2/DigitalLockv2.gen/sources_1/bd/dlembsys/synth/dlembsys.v:3050]
+WARNING: [Synth 8-7023] instance 'auto_pc' of module 'dlembsys_auto_pc_2' has 56 connections declared, but only 54 given [c:/SimpleLock/DigitalLockv2/DigitalLockv2.gen/sources_1/bd/dlembsys/synth/dlembsys.v:3050]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_BYJK02' (0#1) [c:/SimpleLock/DigitalLockv2/DigitalLockv2.gen/sources_1/bd/dlembsys/synth/dlembsys.v:2827]
+INFO: [Synth 8-6157] synthesizing module 's01_couplers_imp_1IGMUOZ' [c:/SimpleLock/DigitalLockv2/DigitalLockv2.gen/sources_1/bd/dlembsys/synth/dlembsys.v:3107]
+INFO: [Synth 8-6155] done synthesizing module 's01_couplers_imp_1IGMUOZ' (0#1) [c:/SimpleLock/DigitalLockv2/DigitalLockv2.gen/sources_1/bd/dlembsys/synth/dlembsys.v:3107]
+INFO: [Synth 8-6157] synthesizing module 'dlembsys_xbar_0' [C:/SimpleLock/DigitalLockv2/DigitalLockv2.runs/synth_1/.Xil/Vivado-42736-Dawgburts-Mothership/realtime/dlembsys_xbar_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'dlembsys_xbar_0' (0#1) [C:/SimpleLock/DigitalLockv2/DigitalLockv2.runs/synth_1/.Xil/Vivado-42736-Dawgburts-Mothership/realtime/dlembsys_xbar_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'dlembsys_microblaze_0_axi_periph_0' (0#1) [c:/SimpleLock/DigitalLockv2/DigitalLockv2.gen/sources_1/bd/dlembsys/synth/dlembsys.v:601]
+INFO: [Synth 8-6157] synthesizing module 'microblaze_0_local_memory_imp_174AV8' [c:/SimpleLock/DigitalLockv2/DigitalLockv2.gen/sources_1/bd/dlembsys/synth/dlembsys.v:2593]
+INFO: [Synth 8-6157] synthesizing module 'dlembsys_dlmb_bram_if_cntlr_0' [C:/SimpleLock/DigitalLockv2/DigitalLockv2.runs/synth_1/.Xil/Vivado-42736-Dawgburts-Mothership/realtime/dlembsys_dlmb_bram_if_cntlr_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'dlembsys_dlmb_bram_if_cntlr_0' (0#1) [C:/SimpleLock/DigitalLockv2/DigitalLockv2.runs/synth_1/.Xil/Vivado-42736-Dawgburts-Mothership/realtime/dlembsys_dlmb_bram_if_cntlr_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'dlembsys_dlmb_v10_0' [C:/SimpleLock/DigitalLockv2/DigitalLockv2.runs/synth_1/.Xil/Vivado-42736-Dawgburts-Mothership/realtime/dlembsys_dlmb_v10_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'dlembsys_dlmb_v10_0' (0#1) [C:/SimpleLock/DigitalLockv2/DigitalLockv2.runs/synth_1/.Xil/Vivado-42736-Dawgburts-Mothership/realtime/dlembsys_dlmb_v10_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'LMB_Rst' of module 'dlembsys_dlmb_v10_0' is unconnected for instance 'dlmb_v10' [c:/SimpleLock/DigitalLockv2/DigitalLockv2.gen/sources_1/bd/dlembsys/synth/dlembsys.v:2739]
+WARNING: [Synth 8-7023] instance 'dlmb_v10' of module 'dlembsys_dlmb_v10_0' has 25 connections declared, but only 24 given [c:/SimpleLock/DigitalLockv2/DigitalLockv2.gen/sources_1/bd/dlembsys/synth/dlembsys.v:2739]
+INFO: [Synth 8-6157] synthesizing module 'dlembsys_ilmb_bram_if_cntlr_0' [C:/SimpleLock/DigitalLockv2/DigitalLockv2.runs/synth_1/.Xil/Vivado-42736-Dawgburts-Mothership/realtime/dlembsys_ilmb_bram_if_cntlr_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'dlembsys_ilmb_bram_if_cntlr_0' (0#1) [C:/SimpleLock/DigitalLockv2/DigitalLockv2.runs/synth_1/.Xil/Vivado-42736-Dawgburts-Mothership/realtime/dlembsys_ilmb_bram_if_cntlr_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'dlembsys_ilmb_v10_0' [C:/SimpleLock/DigitalLockv2/DigitalLockv2.runs/synth_1/.Xil/Vivado-42736-Dawgburts-Mothership/realtime/dlembsys_ilmb_v10_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'dlembsys_ilmb_v10_0' (0#1) [C:/SimpleLock/DigitalLockv2/DigitalLockv2.runs/synth_1/.Xil/Vivado-42736-Dawgburts-Mothership/realtime/dlembsys_ilmb_v10_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'LMB_Rst' of module 'dlembsys_ilmb_v10_0' is unconnected for instance 'ilmb_v10' [c:/SimpleLock/DigitalLockv2/DigitalLockv2.gen/sources_1/bd/dlembsys/synth/dlembsys.v:2785]
+WARNING: [Synth 8-7023] instance 'ilmb_v10' of module 'dlembsys_ilmb_v10_0' has 25 connections declared, but only 24 given [c:/SimpleLock/DigitalLockv2/DigitalLockv2.gen/sources_1/bd/dlembsys/synth/dlembsys.v:2785]
+INFO: [Synth 8-6157] synthesizing module 'dlembsys_lmb_bram_0' [C:/SimpleLock/DigitalLockv2/DigitalLockv2.runs/synth_1/.Xil/Vivado-42736-Dawgburts-Mothership/realtime/dlembsys_lmb_bram_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'dlembsys_lmb_bram_0' (0#1) [C:/SimpleLock/DigitalLockv2/DigitalLockv2.runs/synth_1/.Xil/Vivado-42736-Dawgburts-Mothership/realtime/dlembsys_lmb_bram_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'rsta_busy' of module 'dlembsys_lmb_bram_0' is unconnected for instance 'lmb_bram' [c:/SimpleLock/DigitalLockv2/DigitalLockv2.gen/sources_1/bd/dlembsys/synth/dlembsys.v:2810]
+WARNING: [Synth 8-7071] port 'rstb_busy' of module 'dlembsys_lmb_bram_0' is unconnected for instance 'lmb_bram' [c:/SimpleLock/DigitalLockv2/DigitalLockv2.gen/sources_1/bd/dlembsys/synth/dlembsys.v:2810]
+WARNING: [Synth 8-7023] instance 'lmb_bram' of module 'dlembsys_lmb_bram_0' has 16 connections declared, but only 14 given [c:/SimpleLock/DigitalLockv2/DigitalLockv2.gen/sources_1/bd/dlembsys/synth/dlembsys.v:2810]
+INFO: [Synth 8-6155] done synthesizing module 'microblaze_0_local_memory_imp_174AV8' (0#1) [c:/SimpleLock/DigitalLockv2/DigitalLockv2.gen/sources_1/bd/dlembsys/synth/dlembsys.v:2593]
+INFO: [Synth 8-6157] synthesizing module 'dlembsys_reset_inv_0_0' [C:/SimpleLock/DigitalLockv2/DigitalLockv2.runs/synth_1/.Xil/Vivado-42736-Dawgburts-Mothership/realtime/dlembsys_reset_inv_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'dlembsys_reset_inv_0_0' (0#1) [C:/SimpleLock/DigitalLockv2/DigitalLockv2.runs/synth_1/.Xil/Vivado-42736-Dawgburts-Mothership/realtime/dlembsys_reset_inv_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'dlembsys_rst_clk_wiz_1_100M_0' [C:/SimpleLock/DigitalLockv2/DigitalLockv2.runs/synth_1/.Xil/Vivado-42736-Dawgburts-Mothership/realtime/dlembsys_rst_clk_wiz_1_100M_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'dlembsys_rst_clk_wiz_1_100M_0' (0#1) [C:/SimpleLock/DigitalLockv2/DigitalLockv2.runs/synth_1/.Xil/Vivado-42736-Dawgburts-Mothership/realtime/dlembsys_rst_clk_wiz_1_100M_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'dlembsys_rst_clk_wiz_1_100M_0' is unconnected for instance 'rst_clk_wiz_1_100M' [c:/SimpleLock/DigitalLockv2/DigitalLockv2.gen/sources_1/bd/dlembsys/synth/dlembsys.v:590]
+WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'dlembsys_rst_clk_wiz_1_100M_0' is unconnected for instance 'rst_clk_wiz_1_100M' [c:/SimpleLock/DigitalLockv2/DigitalLockv2.gen/sources_1/bd/dlembsys/synth/dlembsys.v:590]
+WARNING: [Synth 8-7023] instance 'rst_clk_wiz_1_100M' of module 'dlembsys_rst_clk_wiz_1_100M_0' has 10 connections declared, but only 8 given [c:/SimpleLock/DigitalLockv2/DigitalLockv2.gen/sources_1/bd/dlembsys/synth/dlembsys.v:590]
+INFO: [Synth 8-6155] done synthesizing module 'dlembsys' (0#1) [c:/SimpleLock/DigitalLockv2/DigitalLockv2.gen/sources_1/bd/dlembsys/synth/dlembsys.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'dlembsys_wrapper' (0#1) [c:/SimpleLock/DigitalLockv2/DigitalLockv2.gen/sources_1/bd/dlembsys/hdl/dlembsys_wrapper.v:12]
+WARNING: [Synth 8-7129] Port M_ACLK in module s01_couplers_imp_1IGMUOZ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ARESETN in module s01_couplers_imp_1IGMUOZ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ACLK in module s01_couplers_imp_1IGMUOZ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ARESETN in module s01_couplers_imp_1IGMUOZ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ACLK in module s00_couplers_imp_BYJK02 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ARESETN in module s00_couplers_imp_BYJK02 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ACLK in module m02_couplers_imp_1NWYZ0J is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ARESETN in module m02_couplers_imp_1NWYZ0J is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ACLK in module m01_couplers_imp_H1X1UP is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ARESETN in module m01_couplers_imp_H1X1UP is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ACLK in module m01_couplers_imp_H1X1UP is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ARESETN in module m01_couplers_imp_H1X1UP is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ACLK in module m00_couplers_imp_1MB2BLS is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ARESETN in module m00_couplers_imp_1MB2BLS is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_ACLK in module dlembsys_microblaze_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_ARESETN in module dlembsys_microblaze_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M01_ACLK in module dlembsys_microblaze_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M01_ARESETN in module dlembsys_microblaze_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M02_ACLK in module dlembsys_microblaze_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M02_ARESETN in module dlembsys_microblaze_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S00_ACLK in module dlembsys_microblaze_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S00_ARESETN in module dlembsys_microblaze_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S01_ACLK in module dlembsys_microblaze_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S01_ARESETN in module dlembsys_microblaze_0_axi_periph_0 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1366.875 ; gain = 508.102
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1366.875 ; gain = 508.102
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1366.875 ; gain = 508.102
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 1366.875 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/SimpleLock/DigitalLockv2/DigitalLockv2.gen/sources_1/bd/dlembsys/ip/dlembsys_microblaze_0_0/dlembsys_microblaze_0_0/dlembsys_microblaze_0_0_in_context.xdc] for cell 'dlembsys_i/microblaze_0'
+Finished Parsing XDC File [c:/SimpleLock/DigitalLockv2/DigitalLockv2.gen/sources_1/bd/dlembsys/ip/dlembsys_microblaze_0_0/dlembsys_microblaze_0_0/dlembsys_microblaze_0_0_in_context.xdc] for cell 'dlembsys_i/microblaze_0'
+Parsing XDC File [c:/SimpleLock/DigitalLockv2/DigitalLockv2.gen/sources_1/bd/dlembsys/ip/dlembsys_dlmb_v10_0/dlembsys_dlmb_v10_0/dlembsys_dlmb_v10_0_in_context.xdc] for cell 'dlembsys_i/microblaze_0_local_memory/dlmb_v10'
+Finished Parsing XDC File [c:/SimpleLock/DigitalLockv2/DigitalLockv2.gen/sources_1/bd/dlembsys/ip/dlembsys_dlmb_v10_0/dlembsys_dlmb_v10_0/dlembsys_dlmb_v10_0_in_context.xdc] for cell 'dlembsys_i/microblaze_0_local_memory/dlmb_v10'
+Parsing XDC File [c:/SimpleLock/DigitalLockv2/DigitalLockv2.gen/sources_1/bd/dlembsys/ip/dlembsys_ilmb_v10_0/dlembsys_ilmb_v10_0/dlembsys_ilmb_v10_0_in_context.xdc] for cell 'dlembsys_i/microblaze_0_local_memory/ilmb_v10'
+Finished Parsing XDC File [c:/SimpleLock/DigitalLockv2/DigitalLockv2.gen/sources_1/bd/dlembsys/ip/dlembsys_ilmb_v10_0/dlembsys_ilmb_v10_0/dlembsys_ilmb_v10_0_in_context.xdc] for cell 'dlembsys_i/microblaze_0_local_memory/ilmb_v10'
+Parsing XDC File [c:/SimpleLock/DigitalLockv2/DigitalLockv2.gen/sources_1/bd/dlembsys/ip/dlembsys_dlmb_bram_if_cntlr_0/dlembsys_dlmb_bram_if_cntlr_0/dlembsys_dlmb_bram_if_cntlr_0_in_context.xdc] for cell 'dlembsys_i/microblaze_0_local_memory/dlmb_bram_if_cntlr'
+Finished Parsing XDC File [c:/SimpleLock/DigitalLockv2/DigitalLockv2.gen/sources_1/bd/dlembsys/ip/dlembsys_dlmb_bram_if_cntlr_0/dlembsys_dlmb_bram_if_cntlr_0/dlembsys_dlmb_bram_if_cntlr_0_in_context.xdc] for cell 'dlembsys_i/microblaze_0_local_memory/dlmb_bram_if_cntlr'
+Parsing XDC File [c:/SimpleLock/DigitalLockv2/DigitalLockv2.gen/sources_1/bd/dlembsys/ip/dlembsys_ilmb_bram_if_cntlr_0/dlembsys_ilmb_bram_if_cntlr_0/dlembsys_ilmb_bram_if_cntlr_0_in_context.xdc] for cell 'dlembsys_i/microblaze_0_local_memory/ilmb_bram_if_cntlr'
+Finished Parsing XDC File [c:/SimpleLock/DigitalLockv2/DigitalLockv2.gen/sources_1/bd/dlembsys/ip/dlembsys_ilmb_bram_if_cntlr_0/dlembsys_ilmb_bram_if_cntlr_0/dlembsys_ilmb_bram_if_cntlr_0_in_context.xdc] for cell 'dlembsys_i/microblaze_0_local_memory/ilmb_bram_if_cntlr'
+Parsing XDC File [c:/SimpleLock/DigitalLockv2/DigitalLockv2.gen/sources_1/bd/dlembsys/ip/dlembsys_lmb_bram_0/dlembsys_lmb_bram_0/dlembsys_lmb_bram_0_in_context.xdc] for cell 'dlembsys_i/microblaze_0_local_memory/lmb_bram'
+Finished Parsing XDC File [c:/SimpleLock/DigitalLockv2/DigitalLockv2.gen/sources_1/bd/dlembsys/ip/dlembsys_lmb_bram_0/dlembsys_lmb_bram_0/dlembsys_lmb_bram_0_in_context.xdc] for cell 'dlembsys_i/microblaze_0_local_memory/lmb_bram'
+Parsing XDC File [c:/SimpleLock/DigitalLockv2/DigitalLockv2.gen/sources_1/bd/dlembsys/ip/dlembsys_xbar_0/dlembsys_xbar_0/dlembsys_xbar_0_in_context.xdc] for cell 'dlembsys_i/microblaze_0_axi_periph/xbar'
+Finished Parsing XDC File [c:/SimpleLock/DigitalLockv2/DigitalLockv2.gen/sources_1/bd/dlembsys/ip/dlembsys_xbar_0/dlembsys_xbar_0/dlembsys_xbar_0_in_context.xdc] for cell 'dlembsys_i/microblaze_0_axi_periph/xbar'
+Parsing XDC File [c:/SimpleLock/DigitalLockv2/DigitalLockv2.gen/sources_1/bd/dlembsys/ip/dlembsys_auto_pc_2/dlembsys_auto_pc_2/dlembsys_auto_pc_2_in_context.xdc] for cell 'dlembsys_i/microblaze_0_axi_periph/s00_couplers/auto_pc'
+Finished Parsing XDC File [c:/SimpleLock/DigitalLockv2/DigitalLockv2.gen/sources_1/bd/dlembsys/ip/dlembsys_auto_pc_2/dlembsys_auto_pc_2/dlembsys_auto_pc_2_in_context.xdc] for cell 'dlembsys_i/microblaze_0_axi_periph/s00_couplers/auto_pc'
+Parsing XDC File [c:/SimpleLock/DigitalLockv2/DigitalLockv2.gen/sources_1/bd/dlembsys/ip/dlembsys_auto_pc_0/dlembsys_auto_pc_0/dlembsys_auto_pc_0_in_context.xdc] for cell 'dlembsys_i/microblaze_0_axi_periph/m00_couplers/auto_pc'
+Finished Parsing XDC File [c:/SimpleLock/DigitalLockv2/DigitalLockv2.gen/sources_1/bd/dlembsys/ip/dlembsys_auto_pc_0/dlembsys_auto_pc_0/dlembsys_auto_pc_0_in_context.xdc] for cell 'dlembsys_i/microblaze_0_axi_periph/m00_couplers/auto_pc'
+Parsing XDC File [c:/SimpleLock/DigitalLockv2/DigitalLockv2.gen/sources_1/bd/dlembsys/ip/dlembsys_auto_pc_1/dlembsys_auto_pc_1/dlembsys_auto_pc_0_in_context.xdc] for cell 'dlembsys_i/microblaze_0_axi_periph/m02_couplers/auto_pc'
+Finished Parsing XDC File [c:/SimpleLock/DigitalLockv2/DigitalLockv2.gen/sources_1/bd/dlembsys/ip/dlembsys_auto_pc_1/dlembsys_auto_pc_1/dlembsys_auto_pc_0_in_context.xdc] for cell 'dlembsys_i/microblaze_0_axi_periph/m02_couplers/auto_pc'
+Parsing XDC File [c:/SimpleLock/DigitalLockv2/DigitalLockv2.gen/sources_1/bd/dlembsys/ip/dlembsys_mdm_1_0/dlembsys_mdm_1_0/dlembsys_mdm_1_0_in_context.xdc] for cell 'dlembsys_i/mdm_1'
+Finished Parsing XDC File [c:/SimpleLock/DigitalLockv2/DigitalLockv2.gen/sources_1/bd/dlembsys/ip/dlembsys_mdm_1_0/dlembsys_mdm_1_0/dlembsys_mdm_1_0_in_context.xdc] for cell 'dlembsys_i/mdm_1'
+Parsing XDC File [c:/SimpleLock/DigitalLockv2/DigitalLockv2.gen/sources_1/bd/dlembsys/ip/dlembsys_clk_wiz_1_0/dlembsys_clk_wiz_1_0/dlembsys_clk_wiz_1_0_in_context.xdc] for cell 'dlembsys_i/clk_wiz_1'
+Finished Parsing XDC File [c:/SimpleLock/DigitalLockv2/DigitalLockv2.gen/sources_1/bd/dlembsys/ip/dlembsys_clk_wiz_1_0/dlembsys_clk_wiz_1_0/dlembsys_clk_wiz_1_0_in_context.xdc] for cell 'dlembsys_i/clk_wiz_1'
+Parsing XDC File [c:/SimpleLock/DigitalLockv2/DigitalLockv2.gen/sources_1/bd/dlembsys/ip/dlembsys_rst_clk_wiz_1_100M_0/dlembsys_rst_clk_wiz_1_100M_0/dlembsys_rst_clk_wiz_1_100M_0_in_context.xdc] for cell 'dlembsys_i/rst_clk_wiz_1_100M'
+Finished Parsing XDC File [c:/SimpleLock/DigitalLockv2/DigitalLockv2.gen/sources_1/bd/dlembsys/ip/dlembsys_rst_clk_wiz_1_100M_0/dlembsys_rst_clk_wiz_1_100M_0/dlembsys_rst_clk_wiz_1_100M_0_in_context.xdc] for cell 'dlembsys_i/rst_clk_wiz_1_100M'
+Parsing XDC File [c:/SimpleLock/DigitalLockv2/DigitalLockv2.gen/sources_1/bd/dlembsys/ip/dlembsys_axi_uartlite_0_1/dlembsys_axi_uartlite_0_1/dlembsys_axi_uartlite_0_1_in_context.xdc] for cell 'dlembsys_i/axi_uartlite_0'
+Finished Parsing XDC File [c:/SimpleLock/DigitalLockv2/DigitalLockv2.gen/sources_1/bd/dlembsys/ip/dlembsys_axi_uartlite_0_1/dlembsys_axi_uartlite_0_1/dlembsys_axi_uartlite_0_1_in_context.xdc] for cell 'dlembsys_i/axi_uartlite_0'
+Parsing XDC File [c:/SimpleLock/DigitalLockv2/DigitalLockv2.gen/sources_1/bd/dlembsys/ip/dlembsys_axi_bram_ctrl_0_0/dlembsys_axi_bram_ctrl_0_0/dlembsys_axi_bram_ctrl_0_0_in_context.xdc] for cell 'dlembsys_i/axi_bram_ctrl_0'
+Finished Parsing XDC File [c:/SimpleLock/DigitalLockv2/DigitalLockv2.gen/sources_1/bd/dlembsys/ip/dlembsys_axi_bram_ctrl_0_0/dlembsys_axi_bram_ctrl_0_0/dlembsys_axi_bram_ctrl_0_0_in_context.xdc] for cell 'dlembsys_i/axi_bram_ctrl_0'
+Parsing XDC File [c:/SimpleLock/DigitalLockv2/DigitalLockv2.gen/sources_1/bd/dlembsys/ip/dlembsys_axi_bram_ctrl_0_bram_0/dlembsys_axi_bram_ctrl_0_bram_0/dlembsys_axi_bram_ctrl_0_bram_0_in_context.xdc] for cell 'dlembsys_i/axi_bram_ctrl_0_bram'
+Finished Parsing XDC File [c:/SimpleLock/DigitalLockv2/DigitalLockv2.gen/sources_1/bd/dlembsys/ip/dlembsys_axi_bram_ctrl_0_bram_0/dlembsys_axi_bram_ctrl_0_bram_0/dlembsys_axi_bram_ctrl_0_bram_0_in_context.xdc] for cell 'dlembsys_i/axi_bram_ctrl_0_bram'
+Parsing XDC File [c:/SimpleLock/DigitalLockv2/DigitalLockv2.gen/sources_1/bd/dlembsys/ip/dlembsys_reset_inv_0_0/dlembsys_reset_inv_0_0/dlembsys_reset_inv_0_0_in_context.xdc] for cell 'dlembsys_i/reset_inv_0'
+Finished Parsing XDC File [c:/SimpleLock/DigitalLockv2/DigitalLockv2.gen/sources_1/bd/dlembsys/ip/dlembsys_reset_inv_0_0/dlembsys_reset_inv_0_0/dlembsys_reset_inv_0_0_in_context.xdc] for cell 'dlembsys_i/reset_inv_0'
+Parsing XDC File [C:/SimpleLock/DigitalLockv2/DigitalLockv2.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc]
+WARNING: [Vivado 12-584] No ports matched 'sw[0]'. [C:/SimpleLock/DigitalLockv2/DigitalLockv2.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:19]
+WARNING: [Vivado 12-584] No ports matched 'sw[1]'. [C:/SimpleLock/DigitalLockv2/DigitalLockv2.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:20]
+WARNING: [Vivado 12-584] No ports matched 'sw[2]'. [C:/SimpleLock/DigitalLockv2/DigitalLockv2.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:21]
+WARNING: [Vivado 12-584] No ports matched 'sw[3]'. [C:/SimpleLock/DigitalLockv2/DigitalLockv2.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:22]
+WARNING: [Vivado 12-584] No ports matched 'sw[4]'. [C:/SimpleLock/DigitalLockv2/DigitalLockv2.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:23]
+WARNING: [Vivado 12-584] No ports matched 'sw[5]'. [C:/SimpleLock/DigitalLockv2/DigitalLockv2.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:24]
+WARNING: [Vivado 12-584] No ports matched 'sw[6]'. [C:/SimpleLock/DigitalLockv2/DigitalLockv2.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:25]
+WARNING: [Vivado 12-584] No ports matched 'sw[7]'. [C:/SimpleLock/DigitalLockv2/DigitalLockv2.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:26]
+WARNING: [Vivado 12-584] No ports matched 'sw[8]'. [C:/SimpleLock/DigitalLockv2/DigitalLockv2.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:27]
+WARNING: [Vivado 12-584] No ports matched 'sw[9]'. [C:/SimpleLock/DigitalLockv2/DigitalLockv2.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:28]
+WARNING: [Vivado 12-584] No ports matched 'sw[10]'. [C:/SimpleLock/DigitalLockv2/DigitalLockv2.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:29]
+WARNING: [Vivado 12-584] No ports matched 'sw[11]'. [C:/SimpleLock/DigitalLockv2/DigitalLockv2.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:30]
+WARNING: [Vivado 12-584] No ports matched 'sw[12]'. [C:/SimpleLock/DigitalLockv2/DigitalLockv2.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:31]
+WARNING: [Vivado 12-584] No ports matched 'sw[13]'. [C:/SimpleLock/DigitalLockv2/DigitalLockv2.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:32]
+WARNING: [Vivado 12-584] No ports matched 'sw[14]'. [C:/SimpleLock/DigitalLockv2/DigitalLockv2.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:33]
+WARNING: [Vivado 12-584] No ports matched 'sw[15]'. [C:/SimpleLock/DigitalLockv2/DigitalLockv2.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:34]
+WARNING: [Vivado 12-584] No ports matched 'led[0]'. [C:/SimpleLock/DigitalLockv2/DigitalLockv2.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:39]
+WARNING: [Vivado 12-584] No ports matched 'led[1]'. [C:/SimpleLock/DigitalLockv2/DigitalLockv2.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:40]
+WARNING: [Vivado 12-584] No ports matched 'led[2]'. [C:/SimpleLock/DigitalLockv2/DigitalLockv2.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:41]
+WARNING: [Vivado 12-584] No ports matched 'led[3]'. [C:/SimpleLock/DigitalLockv2/DigitalLockv2.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:42]
+WARNING: [Vivado 12-584] No ports matched 'led[4]'. [C:/SimpleLock/DigitalLockv2/DigitalLockv2.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:43]
+WARNING: [Vivado 12-584] No ports matched 'led[5]'. [C:/SimpleLock/DigitalLockv2/DigitalLockv2.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:44]
+WARNING: [Vivado 12-584] No ports matched 'led[6]'. [C:/SimpleLock/DigitalLockv2/DigitalLockv2.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:45]
+WARNING: [Vivado 12-584] No ports matched 'led[7]'. [C:/SimpleLock/DigitalLockv2/DigitalLockv2.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:46]
+WARNING: [Vivado 12-584] No ports matched 'led[8]'. [C:/SimpleLock/DigitalLockv2/DigitalLockv2.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:47]
+WARNING: [Vivado 12-584] No ports matched 'led[9]'. [C:/SimpleLock/DigitalLockv2/DigitalLockv2.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:48]
+WARNING: [Vivado 12-584] No ports matched 'led[10]'. [C:/SimpleLock/DigitalLockv2/DigitalLockv2.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:49]
+WARNING: [Vivado 12-584] No ports matched 'led[11]'. [C:/SimpleLock/DigitalLockv2/DigitalLockv2.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:50]
+WARNING: [Vivado 12-584] No ports matched 'led[12]'. [C:/SimpleLock/DigitalLockv2/DigitalLockv2.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:51]
+WARNING: [Vivado 12-584] No ports matched 'led[13]'. [C:/SimpleLock/DigitalLockv2/DigitalLockv2.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:52]
+WARNING: [Vivado 12-584] No ports matched 'led[14]'. [C:/SimpleLock/DigitalLockv2/DigitalLockv2.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:53]
+WARNING: [Vivado 12-584] No ports matched 'led[15]'. [C:/SimpleLock/DigitalLockv2/DigitalLockv2.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:54]
+WARNING: [Vivado 12-584] No ports matched 'seg[0]'. [C:/SimpleLock/DigitalLockv2/DigitalLockv2.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:68]
+WARNING: [Vivado 12-584] No ports matched 'seg[1]'. [C:/SimpleLock/DigitalLockv2/DigitalLockv2.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:69]
+WARNING: [Vivado 12-584] No ports matched 'seg[2]'. [C:/SimpleLock/DigitalLockv2/DigitalLockv2.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:70]
+WARNING: [Vivado 12-584] No ports matched 'seg[3]'. [C:/SimpleLock/DigitalLockv2/DigitalLockv2.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:71]
+WARNING: [Vivado 12-584] No ports matched 'seg[4]'. [C:/SimpleLock/DigitalLockv2/DigitalLockv2.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:72]
+WARNING: [Vivado 12-584] No ports matched 'seg[5]'. [C:/SimpleLock/DigitalLockv2/DigitalLockv2.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:73]
+WARNING: [Vivado 12-584] No ports matched 'seg[6]'. [C:/SimpleLock/DigitalLockv2/DigitalLockv2.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:74]
+WARNING: [Vivado 12-584] No ports matched 'dp'. [C:/SimpleLock/DigitalLockv2/DigitalLockv2.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:76]
+WARNING: [Vivado 12-584] No ports matched 'an[0]'. [C:/SimpleLock/DigitalLockv2/DigitalLockv2.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:78]
+WARNING: [Vivado 12-584] No ports matched 'an[1]'. [C:/SimpleLock/DigitalLockv2/DigitalLockv2.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:79]
+WARNING: [Vivado 12-584] No ports matched 'an[2]'. [C:/SimpleLock/DigitalLockv2/DigitalLockv2.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:80]
+WARNING: [Vivado 12-584] No ports matched 'an[3]'. [C:/SimpleLock/DigitalLockv2/DigitalLockv2.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:81]
+WARNING: [Vivado 12-584] No ports matched 'an[4]'. [C:/SimpleLock/DigitalLockv2/DigitalLockv2.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:82]
+WARNING: [Vivado 12-584] No ports matched 'an[5]'. [C:/SimpleLock/DigitalLockv2/DigitalLockv2.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:83]
+WARNING: [Vivado 12-584] No ports matched 'an[6]'. [C:/SimpleLock/DigitalLockv2/DigitalLockv2.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:84]
+WARNING: [Vivado 12-584] No ports matched 'an[7]'. [C:/SimpleLock/DigitalLockv2/DigitalLockv2.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:85]
+WARNING: [Vivado 12-584] No ports matched 'btnCpuReset'. [C:/SimpleLock/DigitalLockv2/DigitalLockv2.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:90]
+WARNING: [Vivado 12-584] No ports matched 'btnC'. [C:/SimpleLock/DigitalLockv2/DigitalLockv2.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:91]
+WARNING: [Vivado 12-584] No ports matched 'btnU'. [C:/SimpleLock/DigitalLockv2/DigitalLockv2.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:92]
+WARNING: [Vivado 12-584] No ports matched 'btnL'. [C:/SimpleLock/DigitalLockv2/DigitalLockv2.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:93]
+WARNING: [Vivado 12-584] No ports matched 'btnR'. [C:/SimpleLock/DigitalLockv2/DigitalLockv2.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:94]
+WARNING: [Vivado 12-584] No ports matched 'btnD'. [C:/SimpleLock/DigitalLockv2/DigitalLockv2.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:95]
+WARNING: [Vivado 12-584] No ports matched 'pid_LED'. [C:/SimpleLock/DigitalLockv2/DigitalLockv2.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:127]
+WARNING: [Vivado 12-584] No ports matched 'sclk_io'. [C:/SimpleLock/DigitalLockv2/DigitalLockv2.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:265]
+WARNING: [Vivado 12-584] No ports matched 'sda_io'. [C:/SimpleLock/DigitalLockv2/DigitalLockv2.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:266]
+WARNING: [Vivado 12-584] No ports matched 'sclk_io'. [C:/SimpleLock/DigitalLockv2/DigitalLockv2.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:268]
+WARNING: [Vivado 12-584] No ports matched 'sda_io'. [C:/SimpleLock/DigitalLockv2/DigitalLockv2.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:269]
+WARNING: [Vivado 12-584] No ports matched 'hc05_uart_rxd'. [C:/SimpleLock/DigitalLockv2/DigitalLockv2.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:272]
+WARNING: [Vivado 12-584] No ports matched 'hc05_uart_rxd'. [C:/SimpleLock/DigitalLockv2/DigitalLockv2.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:273]
+CRITICAL WARNING: [Common 17-161] Invalid option value '##' specified for 'objects'. [C:/SimpleLock/DigitalLockv2/DigitalLockv2.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:273]
+WARNING: [Vivado 12-584] No ports matched 'hc05_uart_txd'. [C:/SimpleLock/DigitalLockv2/DigitalLockv2.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:275]
+WARNING: [Vivado 12-584] No ports matched 'hc05_uart_txd'. [C:/SimpleLock/DigitalLockv2/DigitalLockv2.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:276]
+CRITICAL WARNING: [Common 17-161] Invalid option value '##' specified for 'objects'. [C:/SimpleLock/DigitalLockv2/DigitalLockv2.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:276]
+Finished Parsing XDC File [C:/SimpleLock/DigitalLockv2/DigitalLockv2.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/SimpleLock/DigitalLockv2/DigitalLockv2.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/dlembsys_wrapper_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/SimpleLock/DigitalLockv2/DigitalLockv2.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/dlembsys_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/dlembsys_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/SimpleLock/DigitalLockv2/DigitalLockv2.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/SimpleLock/DigitalLockv2/DigitalLockv2.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1366.875 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1366.875 ; gain = 0.000
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'dlembsys_i/axi_bram_ctrl_0_bram' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'dlembsys_i/microblaze_0_local_memory/lmb_bram' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1366.875 ; gain = 508.102
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1366.875 ; gain = 508.102
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for sys_clock. (constraint file  c:/SimpleLock/DigitalLockv2/DigitalLockv2.gen/sources_1/bd/dlembsys/ip/dlembsys_clk_wiz_1_0/dlembsys_clk_wiz_1_0/dlembsys_clk_wiz_1_0_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for sys_clock. (constraint file  c:/SimpleLock/DigitalLockv2/DigitalLockv2.gen/sources_1/bd/dlembsys/ip/dlembsys_clk_wiz_1_0/dlembsys_clk_wiz_1_0/dlembsys_clk_wiz_1_0_in_context.xdc, line 4).
+Applied set_property KEEP_HIERARCHY = SOFT for dlembsys_i. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dlembsys_i/microblaze_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dlembsys_i/microblaze_0_local_memory/dlmb_v10. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dlembsys_i/microblaze_0_local_memory/ilmb_v10. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dlembsys_i/microblaze_0_local_memory/dlmb_bram_if_cntlr. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dlembsys_i/microblaze_0_local_memory/ilmb_bram_if_cntlr. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dlembsys_i/microblaze_0_local_memory/lmb_bram. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dlembsys_i/microblaze_0_axi_periph/xbar. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dlembsys_i/microblaze_0_axi_periph/s00_couplers/auto_pc. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dlembsys_i/microblaze_0_axi_periph/m00_couplers/auto_pc. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dlembsys_i/microblaze_0_axi_periph/m02_couplers/auto_pc. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dlembsys_i/microblaze_0_axi_periph. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dlembsys_i/mdm_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dlembsys_i/clk_wiz_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dlembsys_i/rst_clk_wiz_1_100M. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dlembsys_i/axi_uartlite_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dlembsys_i/axi_bram_ctrl_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dlembsys_i/axi_bram_ctrl_0_bram. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dlembsys_i/reset_inv_0. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1366.875 ; gain = 508.102
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1366.875 ; gain = 508.102
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port M00_ACLK in module dlembsys_microblaze_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_ARESETN in module dlembsys_microblaze_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M01_ACLK in module dlembsys_microblaze_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M01_ARESETN in module dlembsys_microblaze_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M02_ACLK in module dlembsys_microblaze_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M02_ARESETN in module dlembsys_microblaze_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S00_ACLK in module dlembsys_microblaze_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S00_ARESETN in module dlembsys_microblaze_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S01_ACLK in module dlembsys_microblaze_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S01_ARESETN in module dlembsys_microblaze_0_axi_periph_0 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1366.875 ; gain = 508.102
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1366.875 ; gain = 508.102
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1366.875 ; gain = 508.102
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1366.875 ; gain = 508.102
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1366.977 ; gain = 508.203
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1366.977 ; gain = 508.203
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1366.977 ; gain = 508.203
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1366.977 ; gain = 508.203
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1366.977 ; gain = 508.203
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1366.977 ; gain = 508.203
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------------------------+----------+
+|      |BlackBox name                   |Instances |
++------+--------------------------------+----------+
+|1     |dlembsys_xbar_0                 |         1|
+|2     |dlembsys_auto_pc_0              |         1|
+|3     |dlembsys_auto_pc_1              |         1|
+|4     |dlembsys_auto_pc_2              |         1|
+|5     |dlembsys_axi_bram_ctrl_0_0      |         1|
+|6     |dlembsys_axi_bram_ctrl_0_bram_0 |         1|
+|7     |dlembsys_axi_uartlite_0_1       |         1|
+|8     |dlembsys_clk_wiz_1_0            |         1|
+|9     |dlembsys_mdm_1_0                |         1|
+|10    |dlembsys_microblaze_0_0         |         1|
+|11    |dlembsys_reset_inv_0_0          |         1|
+|12    |dlembsys_rst_clk_wiz_1_100M_0   |         1|
+|13    |dlembsys_dlmb_bram_if_cntlr_0   |         1|
+|14    |dlembsys_dlmb_v10_0             |         1|
+|15    |dlembsys_ilmb_bram_if_cntlr_0   |         1|
+|16    |dlembsys_ilmb_v10_0             |         1|
+|17    |dlembsys_lmb_bram_0             |         1|
++------+--------------------------------+----------+
+
+Report Cell Usage: 
++------+------------------------------+------+
+|      |Cell                          |Count |
++------+------------------------------+------+
+|1     |dlembsys_auto_pc              |     3|
+|4     |dlembsys_axi_bram_ctrl_0      |     1|
+|5     |dlembsys_axi_bram_ctrl_0_bram |     1|
+|6     |dlembsys_axi_uartlite_0       |     1|
+|7     |dlembsys_clk_wiz_1            |     1|
+|8     |dlembsys_dlmb_bram_if_cntlr   |     1|
+|9     |dlembsys_dlmb_v10             |     1|
+|10    |dlembsys_ilmb_bram_if_cntlr   |     1|
+|11    |dlembsys_ilmb_v10             |     1|
+|12    |dlembsys_lmb_bram             |     1|
+|13    |dlembsys_mdm_1                |     1|
+|14    |dlembsys_microblaze_0         |     1|
+|15    |dlembsys_reset_inv_0          |     1|
+|16    |dlembsys_rst_clk_wiz_1_100M   |     1|
+|17    |dlembsys_xbar                 |     1|
+|18    |IBUF                          |     3|
+|19    |OBUF                          |     1|
++------+------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1366.977 ; gain = 508.203
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 11 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:10 ; elapsed = 00:00:15 . Memory (MB): peak = 1366.977 ; gain = 508.203
+Synthesis Optimization Complete : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1366.977 ; gain = 508.203
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 1379.051 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1388.793 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: b827922e
+INFO: [Common 17-83] Releasing license: Synthesis
+76 Infos, 129 Warnings, 2 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:32 . Memory (MB): peak = 1388.793 ; gain = 929.340
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Common 17-1381] The checkpoint 'C:/SimpleLock/DigitalLockv2/DigitalLockv2.runs/synth_1/dlembsys_wrapper.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file dlembsys_wrapper_utilization_synth.rpt -pb dlembsys_wrapper_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Mar 16 12:15:24 2025...
