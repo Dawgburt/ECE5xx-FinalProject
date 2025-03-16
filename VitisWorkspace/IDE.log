@@ -1,0 +1,9 @@
+17:56:10 DEBUG : Logs will be stored at 'C:/ECE558-EmbeddedSystemsProgramming/ECE5xx-FinalProject/VitisWorkspace/IDE.log'.
+17:56:13 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\ECE558-EmbeddedSystemsProgramming\ECE5xx-FinalProject\VitisWorkspace\temp_xsdb_launch_script.tcl
+17:56:13 INFO  : Registering command handlers for Vitis TCF services
+17:56:13 INFO  : Platform repository initialization has completed.
+17:56:15 INFO  : XSCT server has started successfully.
+17:56:15 INFO  : Successfully done setting XSCT server connection channel  
+17:56:15 INFO  : plnx-install-location is set to ''
+17:56:15 INFO  : Successfully done setting workspace for the tool. 
+17:56:15 INFO  : Successfully done query RDI_DATADIR 

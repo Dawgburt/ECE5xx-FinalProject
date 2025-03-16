@@ -1,0 +1,15 @@
+verilog xil_defaultlib --include "../../../../DigitalLockv2.gen/sources_1/bd/dlembsys/ipshared/ec67/hdl" --include "../../../../DigitalLockv2.gen/sources_1/bd/dlembsys/ipshared/7698" \
+"../../../bd/dlembsys/ip/dlembsys_lmb_bram_0/sim/dlembsys_lmb_bram_0.v" \
+"../../../bd/dlembsys/ip/dlembsys_xbar_0/sim/dlembsys_xbar_0.v" \
+"../../../bd/dlembsys/ip/dlembsys_clk_wiz_1_0/dlembsys_clk_wiz_1_0_clk_wiz.v" \
+"../../../bd/dlembsys/ip/dlembsys_clk_wiz_1_0/dlembsys_clk_wiz_1_0.v" \
+"../../../bd/dlembsys/ip/dlembsys_axi_bram_ctrl_0_bram_0/sim/dlembsys_axi_bram_ctrl_0_bram_0.v" \
+"../../../bd/dlembsys/ip/dlembsys_reset_inv_0_0/sim/dlembsys_reset_inv_0_0.v" \
+"../../../bd/dlembsys/sim/dlembsys.v" \
+"../../../bd/dlembsys/ip/dlembsys_auto_pc_2/sim/dlembsys_auto_pc_2.v" \
+"../../../bd/dlembsys/ip/dlembsys_auto_pc_0/sim/dlembsys_auto_pc_0.v" \
+"../../../bd/dlembsys/ip/dlembsys_auto_pc_1/sim/dlembsys_auto_pc_1.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort
