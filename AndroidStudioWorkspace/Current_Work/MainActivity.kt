@@ -62,7 +62,8 @@ class MainActivity : ComponentActivity() {
                 //Only here for preview purposes
                 //AddUserScreen()
                 //AddUserCheckDBSplashScreen()
-                LoginCheckDBSplashScreen()
+                //LoginCheckDBSplashScreen()
+                SendPINandLockStatusScreen()
             }
         }
     }
@@ -492,6 +493,93 @@ fun AddUserScreen()
 }
 
 
+
+@Composable
+fun SendPINandLockStatusScreen(){
+    //Variables here
+    val PIN = rememberSaveable { mutableStateOf("")} //empty string
+    val PINVisible = remember { mutableStateOf(false) } //PIN is not visible by default
+    val PINError = remember { mutableStateOf("") } //no error message
+
+    Column(){
+        //Arrow Back button
+        Box(
+            modifier = Modifier.fillMaxWidth().padding(4.dp),
+            contentAlignment = Alignment.TopStart
+        ) {
+            IconButton(onClick = {
+                // TODO add navigation to Login Screen
+            }) {
+                Icon(
+                    imageVector = Icons.Default.ArrowBack,
+                    contentDescription = "Back"
+                )
+            }
+        }
+
+        //PIN Text Field
+        //Makes text obscured by default. Can be toggled to see text
+        OutlinedTextField(value = PIN.value, onValueChange = { newPIN ->
+            PIN.value = newPIN
+            PINError.value = "" //Clear error when user types
+        },
+            label = { Text("PIN") },
+            visualTransformation = if (PINVisible.value) VisualTransformation.None else PasswordVisualTransformation(),
+            isError = PINError.value.isNotEmpty(), //Show error if there is one
+            trailingIcon = {
+                IconButton(onClick = { PINVisible.value = !PINVisible.value }){
+                    val icon = if (PINVisible.value) {
+                        Icons.Default.VisibilityOff
+                    }
+                    else{
+                        Icons.Default.Visibility
+                    }
+                    Icon(imageVector = icon, contentDescription = "Toggle PIN Visibility")
+                }
+            },
+            modifier = Modifier.padding(16.dp)
+        )
+        if (PINError.value.isNotEmpty()){
+            Text(
+                text = PINError.value,
+                color = MaterialTheme.colorScheme.error,
+                style = MaterialTheme.typography.labelSmall,
+                modifier = Modifier.padding(start = 16.dp)
+            )
+        }
+
+        //Button to Send Pin
+        //Prevents Sending of a blank PIN
+        Box(
+            modifier = Modifier.fillMaxSize(),
+            contentAlignment = Alignment.BottomCenter
+        ){
+            Button(
+                modifier = Modifier.height(80.dp) .fillMaxWidth() .padding(16.dp),
+                shape = MaterialTheme.shapes.medium,
+                onClick = {
+                    //Makes Sure PIN is not blank. No other error checking for security
+                    when{
+                        PIN.value.isEmpty() -> {
+                            PINError.value = "PIN cannot be empty"
+                        }
+                        else -> {
+                            //TODO SEND PIN VIA BT
+                            //TODO ADD LOGIC TO HANDLE MESSAGES SENT BACK
+                        }
+                    }
+                }
+            ){
+                Text(
+                    text = "SEND PIN"
+                )
+            }
+        }
+    }
+}
+
+
+
 //Login Check DataBase (DB) Splash Screen
 //Indicates to User that the DataBase is being checked after Login attempt and
 //if the username and password match goes to the Lock Status Screen
@@ -509,10 +597,12 @@ fun LoginCheckDBSplashScreen() {
     // Countdown timer state
     val countdownTime = remember { mutableStateOf(30) }
     val countdownText = remember { mutableStateOf("30s") }
+    val mismatchLimit = 3
 
-    // Start countdown when mismatch count is >= 1
+    //Used to Countdown Security Lockout Time
+    // Start countdown when mismatch count is >= misMatchLimit (set 3 for real, 1 for testing pre nav/db)
     LaunchedEffect(mismatchCount.value) {
-        if (mismatchCount.value >= 1) {
+        if (mismatchCount.value >= mismatchLimit) {
             // Start the countdown if there are mismatches
             while (countdownTime.value > 0) {
                 kotlinx.coroutines.delay(1000) // Wait for 1 second
@@ -550,13 +640,11 @@ fun LoginCheckDBSplashScreen() {
 
             // Update State Based on the Result
             loadingDB.value = false
-            if ((!isUserNameValid.value || !isPasswordValid.value) && mismatchCount.value < 1) {
-                // 1 for test purposes, TODO change to 3 after testing
+            if ((!isUserNameValid.value || !isPasswordValid.value) && mismatchCount.value < mismatchLimit) {
                 feedbackMessage.value = "Login Failed"
                 mismatchCount.value++
                 isError.value = true
-            } else if ((!isUserNameValid.value || !isPasswordValid.value) && mismatchCount.value >= 1) {
-                // 1 for test purposes, TODO change to 3 after testing
+            } else if ((!isUserNameValid.value || !isPasswordValid.value) && mismatchCount.value >= mismatchLimit) {
                 feedbackMessage.value =
                     "Too Many Failed Login Attempts\n30s Security Lockout Enabled"
                 mismatchCount.value++
@@ -584,11 +672,11 @@ fun LoginCheckDBSplashScreen() {
                     // TODO: navigate to Send PIN and Lock Status Screen
                 }
                 // Username or Password Wrong, but not too many attempts
-                else if ((!isUserNameValid.value || !isPasswordValid.value) && mismatchCount.value < 1) {
+                else if ((!isUserNameValid.value || !isPasswordValid.value) && mismatchCount.value < mismatchLimit) {
                     // TODO: navigate to Login Screen
                 }
                 // Username or Password Wrong and there were too many attempts
-                else if ((!isUserNameValid.value || !isPasswordValid.value) && mismatchCount.value >= 1) {
+                else if ((!isUserNameValid.value || !isPasswordValid.value) && mismatchCount.value >= mismatchLimit) {
                     // The countdown is happening here
                     feedbackMessage.value = "Security Lockout: ${countdownText.value}" // Accessing value here
                     // TODO: Implement navigation to Login Screen once countdown finishes
@@ -597,7 +685,7 @@ fun LoginCheckDBSplashScreen() {
         }
 
         // Display the countdown timer if the mismatch count is >= 1 (lockout)
-        if (mismatchCount.value >= 1 && countdownTime.value > 0) {
+        if (mismatchCount.value >= mismatchLimit && countdownTime.value > 0) {
             Text(
                 text = "Lockout: ${countdownText.value}", // Accessing value here
                 modifier = Modifier
@@ -609,10 +697,6 @@ fun LoginCheckDBSplashScreen() {
         }
     }
 }
-
-
-
-
 
 
 //New User Check DataBase (DB) Splash Screen
@@ -699,14 +783,6 @@ fun AddUserCheckDBSplashScreen()
 */
 
 //Place Active Preview Here (Done to save space
-//Login Check DB Splash Screen Preview
-@Preview(showBackground = true)
-@Composable
-fun LoginCheckDBSplashScreenPreview() {
-    ECE_544x558_Final_Project_AppTheme {
-        LoginCheckDBSplashScreen()
-    }
-}
 
 
 /* Previews Placed Here to Save Memory
@@ -744,6 +820,15 @@ fun LoginCheckDBSplashScreenPreview() {
 fun AddUserCheckDBSplashScreenPreview() {
     ECE_544x558_Final_Project_AppTheme {
         AddUserCheckDBSplashScreen()
+    }
+}
+
+//Send PIN and Update Lock Status
+@Preview(showBackground = true)
+@Composable
+fun SendPINandLockStatusScreenPreview() {
+    ECE_544x558_Final_Project_AppTheme {
+        SendPINandLockStatusScreen()
     }
 }
 *
