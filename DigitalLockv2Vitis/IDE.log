@@ -626,3 +626,92 @@ con
 
 15:55:04 INFO  : Launch script is exported to file 'C:\SimpleLock\DigitalLockv2Vitis\DLapplication_system\_ide\scripts\systemdebugger_dlapplication_system_standalone.tcl'
 16:18:47 INFO  : Disconnected from the channel tcfchan#19.
+10:12:24 DEBUG : Logs will be stored at 'C:/SimpleLock/DigitalLockv2Vitis/IDE.log'.
+10:12:24 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\SimpleLock\DigitalLockv2Vitis\temp_xsdb_launch_script.tcl
+10:12:28 INFO  : XSCT server has started successfully.
+10:12:28 INFO  : Successfully done setting XSCT server connection channel  
+10:12:28 INFO  : plnx-install-location is set to ''
+10:12:28 INFO  : Registering command handlers for Vitis TCF services
+10:12:28 INFO  : Platform repository initialization has completed.
+10:12:28 INFO  : Successfully done setting workspace for the tool. 
+10:12:28 INFO  : Successfully done query RDI_DATADIR 
+10:12:49 INFO  : Bit file 'C:/SimpleLock/DigitalLockv2Vitis/DLapplication/_ide/bitstream/download.bit' is generated.
+10:12:51 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:12:52 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys A7 -100T 210292BB2FBAA" && level==0 && jtag_device_ctx=="jsn-Nexys A7 -100T-210292BB2FBAA-13631093-0"}' command is executed.
+10:12:54 INFO  : Device configured successfully with "C:/SimpleLock/DigitalLockv2Vitis/DLapplication/_ide/bitstream/download.bit"
+10:13:44 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:13:44 INFO  : Jtag cable 'Digilent Nexys A7 -100T 210292BB2FBAA' is selected.
+10:13:44 INFO  : 'jtag frequency' command is executed.
+10:13:44 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys A7 -100T 210292BB2FBAA" && level==0 && jtag_device_ctx=="jsn-Nexys A7 -100T-210292BB2FBAA-13631093-0"}' command is executed.
+10:13:47 INFO  : Device configured successfully with "C:/SimpleLock/DigitalLockv2Vitis/DLapplication/_ide/bitstream/download.bit"
+10:13:47 INFO  : Context for processor 'microblaze_0' is selected.
+10:13:47 INFO  : Hardware design and registers information is loaded from 'C:/SimpleLock/DigitalLockv2Vitis/DLplatform/export/DLplatform/hw/DLembsys.xsa'.
+10:13:47 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+10:13:47 INFO  : Context for processor 'microblaze_0' is selected.
+10:13:47 INFO  : System reset is completed.
+10:13:50 INFO  : 'after 3000' command is executed.
+10:13:50 INFO  : Context for processor 'microblaze_0' is selected.
+10:13:50 INFO  : The application 'C:/SimpleLock/DigitalLockv2Vitis/DLapplication/Debug/DLapplication.elf' is downloaded to processor 'microblaze_0'.
+10:13:50 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys A7 -100T 210292BB2FBAA" && level==0 && jtag_device_ctx=="jsn-Nexys A7 -100T-210292BB2FBAA-13631093-0"}
+fpga -file C:/SimpleLock/DigitalLockv2Vitis/DLapplication/_ide/bitstream/download.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/SimpleLock/DigitalLockv2Vitis/DLplatform/export/DLplatform/hw/DLembsys.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/SimpleLock/DigitalLockv2Vitis/DLapplication/Debug/DLapplication.elf
+----------------End of Script----------------
+
+10:13:50 INFO  : Context for processor 'microblaze_0' is selected.
+10:13:50 INFO  : 'con' command is executed.
+10:13:50 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+10:13:50 INFO  : Launch script is exported to file 'C:\SimpleLock\DigitalLockv2Vitis\DLapplication_system\_ide\scripts\systemdebugger_dlapplication_system_standalone.tcl'
+10:16:50 INFO  : Checking for BSP changes to sync application flags for project 'DLapplication'...
+10:21:53 INFO  : Checking for BSP changes to sync application flags for project 'DLapplication'...
+10:23:00 INFO  : No changes in MSS file content so sources will not be generated.
+11:35:19 INFO  : Result from executing command 'getProjects': DLplatform
+11:35:19 INFO  : Result from executing command 'getPlatforms': DLplatform|C:/SimpleLock/DigitalLockv2Vitis/DLplatform/export/DLplatform/DLplatform.xpfm;xilinx_zcu102_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm
+11:35:19 INFO  : Checking for BSP changes to sync application flags for project 'DLapplication'...
+11:35:59 INFO  : Checking for BSP changes to sync application flags for project 'DLapplication'...
+11:36:43 INFO  : Checking for BSP changes to sync application flags for project 'DLapplication'...
+11:38:52 INFO  : No changes in MSS file content so sources will not be generated.
+11:39:03 INFO  : Checking for BSP changes to sync application flags for project 'DLapplication'...
+11:39:09 INFO  : Checking for BSP changes to sync application flags for project 'DLapplication'...
+11:55:15 INFO  : Checking for BSP changes to sync application flags for project 'DLapplication'...
+11:56:05 INFO  : Checking for BSP changes to sync application flags for project 'DLapplication'...
+11:56:24 INFO  : Checking for BSP changes to sync application flags for project 'DLapplication'...
+11:56:33 INFO  : Checking for BSP changes to sync application flags for project 'DLapplication'...
+11:56:43 INFO  : Checking for BSP changes to sync application flags for project 'DLapplication'...
+11:57:03 INFO  : Checking for BSP changes to sync application flags for project 'DLapplication'...
+11:58:04 INFO  : Checking for BSP changes to sync application flags for project 'DLapplication'...
+12:00:59 INFO  : Checking for BSP changes to sync application flags for project 'DLapplication'...
+12:02:02 INFO  : Disconnected from the channel tcfchan#1.
+12:03:13 DEBUG : Logs will be stored at 'C:/SimpleLock/DigitalLockv2Vitis/IDE.log'.
+12:03:13 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\SimpleLock\DigitalLockv2Vitis\temp_xsdb_launch_script.tcl
+12:03:15 INFO  : XSCT server has started successfully.
+12:03:15 INFO  : Successfully done setting XSCT server connection channel  
+12:03:15 INFO  : plnx-install-location is set to ''
+12:03:15 INFO  : Successfully done setting workspace for the tool. 
+12:03:16 INFO  : Registering command handlers for Vitis TCF services
+12:03:16 INFO  : Successfully done query RDI_DATADIR 
+12:03:16 INFO  : Platform repository initialization has completed.
+12:03:28 INFO  : Checking for BSP changes to sync application flags for project 'DLapplication'...
+12:03:47 INFO  : Checking for BSP changes to sync application flags for project 'DLapplication'...
+12:05:39 DEBUG : Logs will be stored at 'C:/SimpleLock/DigitalLockv2Vitis/IDE.log'.
+12:05:40 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\SimpleLock\DigitalLockv2Vitis\temp_xsdb_launch_script.tcl
+12:05:42 INFO  : XSCT server has started successfully.
+12:05:42 INFO  : Successfully done setting XSCT server connection channel  
+12:05:42 INFO  : plnx-install-location is set to ''
+12:05:42 INFO  : Successfully done setting workspace for the tool. 
+12:05:42 INFO  : Registering command handlers for Vitis TCF services
+12:05:42 INFO  : Successfully done query RDI_DATADIR 
+12:05:43 INFO  : Platform repository initialization has completed.
+12:10:20 INFO  : Checking for BSP changes to sync application flags for project 'DLapplication'...
