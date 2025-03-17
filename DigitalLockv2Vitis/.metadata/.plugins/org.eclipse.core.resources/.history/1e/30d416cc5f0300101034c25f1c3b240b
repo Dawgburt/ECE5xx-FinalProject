@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="DLapplication" location="C:/SimpleLock/DigitalLockv2Vitis/DLapplication" platform="C:/SimpleLock/DigitalLockv2Vitis/DLplatform/export/DLplatform/DLplatform.xpfm" platformUID="xilinx:nexys-a7-100t::0.0(custom)" systemProject="DLapplication_system" sysConfig="DLplatform" runtime="C/C++" cpu="standalone_domain" cpuInstance="microblaze_0" os="standalone" mssSignature="a253ba79d4d6feabdb8fb59de99dcf02">
+  <configuration name="Debug" id="xilinx.gnu.mb.exe.debug.274014403">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.mb.exe.release.626270760" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="peripheral_tests"/>
+</sdkproject:SdkProject>

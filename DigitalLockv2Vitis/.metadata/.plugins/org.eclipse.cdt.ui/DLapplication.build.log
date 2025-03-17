@@ -1,6 +1,21 @@
-15:52:00 **** Incremental Build of configuration Debug for project DLapplication ****
+12:10:21 **** Incremental Build of configuration Debug for project DLapplication ****
 make all 
-make: Nothing to be done for 'all'.
+'Building file: ../src/DigitalLockApp.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/DigitalLockApp.o" -IC:/SimpleLock/DigitalLockv2Vitis/DLplatform/export/DLplatform/sw/DLplatform/standalone_domain/bspinclude/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/DigitalLockApp.d" -MT"src/DigitalLockApp.o" -o "src/DigitalLockApp.o" "../src/DigitalLockApp.c"
+'Finished building: ../src/DigitalLockApp.c'
+' '
+'Building target: DLapplication.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LC:/SimpleLock/DigitalLockv2Vitis/DLplatform/export/DLplatform/sw/DLplatform/standalone_domain/bsplib/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "DLapplication.elf"  ./src/DigitalLockApp.o ./src/xuartlite_selftest_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: DLapplication.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size DLapplication.elf  |tee "DLapplication.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8372	    304	   3292	  11968	   2ec0	DLapplication.elf
+'Finished building: DLapplication.elf.size'
+' '
 
-15:52:00 Build Finished (took 232ms)
+12:10:21 Build Finished (took 660ms)
 

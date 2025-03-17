@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1742152482" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/dlembsys_wrapper.dcp">
   <File Type="PA-TCL" Name="dlembsys_wrapper.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="dlembsys_wrapper_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="dlembsys_wrapper_reports.tcl"/>
   <File Type="RDS-RDS" Name="dlembsys_wrapper.vds"/>
   <File Type="RDS-UTIL" Name="dlembsys_wrapper_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="dlembsys_wrapper_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="dlembsys_wrapper.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="dlembsys_wrapper_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="dlembsys_wrapper_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/bd/dlembsys/dlembsys.bd">
@@ -64,17 +61,17 @@
     <Step Id="synth_design"/>
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="dlembsys_microblaze_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="dlembsys_dlmb_v10_0"/>
   <BlockFileSet Type="BlockSrcs" Name="dlembsys_axi_uartlite_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="dlembsys_xbar_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="dlembsys_dlmb_v10_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="dlembsys_dlmb_bram_if_cntlr_0"/>
   <BlockFileSet Type="BlockSrcs" Name="dlembsys_ilmb_v10_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="dlembsys_dlmb_bram_if_cntlr_0"/>
   <BlockFileSet Type="BlockSrcs" Name="dlembsys_axi_bram_ctrl_0_bram_0"/>
   <BlockFileSet Type="BlockSrcs" Name="dlembsys_ilmb_bram_if_cntlr_0"/>
   <BlockFileSet Type="BlockSrcs" Name="dlembsys_lmb_bram_0"/>
   <BlockFileSet Type="BlockSrcs" Name="dlembsys_mdm_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="dlembsys_clk_wiz_1_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="dlembsys_axi_bram_ctrl_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="dlembsys_rst_clk_wiz_1_100M_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="dlembsys_axi_bram_ctrl_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="dlembsys_reset_inv_0_0"/>
 </GenRun>

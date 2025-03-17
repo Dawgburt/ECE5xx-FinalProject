@@ -24,3 +24,8 @@ catch {bsp regenerate}
 platform generate
 platform clean
 platform generate
+platform active {DLplatform}
+bsp reload
+bsp reload
+platform generate -domains 
+bsp reload

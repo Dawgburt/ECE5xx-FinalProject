@@ -1,0 +1,32 @@
+#include "xiic.h"
+#include "xil_printf.h"
+#include "xparameters.h"
+
+#define IIC_DEVICE_ID XPAR_IIC_0_DEVICE_ID  // Update if necessary
+
+XIic Iic;  // I²C instance
+u8 RecvBuffer[16];  // Buffer for received data
+
+int main() {
+    int Status;
+
+    // Initialize I²C
+    Status = XIic_Initialize(&Iic, IIC_DEVICE_ID);
+    if (Status != XST_SUCCESS) {
+        xil_printf("I2C Initialization Failed!\r\n");
+        return XST_FAILURE;
+    }
+
+    xil_printf("I2C Initialized. Waiting for data...\r\n");
+
+    while (1) {
+        // Receive data from RPi
+        int receivedBytes = XIic_Recv(XPAR_IIC_0_BASEADDR, 0x42, RecvBuffer, sizeof(RecvBuffer), XIIC_STOP);
+
+        if (receivedBytes > 0) {
+            RecvBuffer[receivedBytes] = '\0';  // Null terminate
+            xil_printf("Received over I2C: %s\r\n", RecvBuffer);
+        }
+    }
+    return 0;
+}
