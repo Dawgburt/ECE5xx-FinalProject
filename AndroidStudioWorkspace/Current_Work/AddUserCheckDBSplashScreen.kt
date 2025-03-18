@@ -86,7 +86,7 @@ fun AddUserCheckDBSplashScreen(navController: NavController, username: String, p
             LaunchedEffect(isUserNameTaken) {
                 //1 second delay to let user read feedback
                 kotlinx.coroutines.delay(1000)
-                
+
                 if (isUserNameTaken)
                 {
                     //Username is taken so Adding User FAILS. Return to Add User Screen to try again
