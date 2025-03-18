@@ -91,7 +91,7 @@ fun AddUserCheckDBSplashScreen(navController: NavController, username: String, p
                 {
                     //Username is taken so Adding User FAILS. Return to Add User Screen to try again
                     navController.navigate(Screen.AddUserScreen.route){
-                        popUpTo(Screen.AddUserCheckDBSplashScreen.route){
+                        popUpTo(Screen.LoginScreen.route){
                             inclusive = true //Remove Add User Check DB Splash Screen from back stack
                         }
                     }
@@ -100,7 +100,7 @@ fun AddUserCheckDBSplashScreen(navController: NavController, username: String, p
                 {
                     //User is successful in updating the DB so they get sent back to the login screen to login
                     navController.navigate(Screen.LoginScreen.route){
-                        popUpTo(Screen.AddUserCheckDBSplashScreen.route){
+                        popUpTo(Screen.LoginScreen.route){
                             inclusive = true //Remove Add User Check DB Splash Screen from back stack
                         }
                     }
