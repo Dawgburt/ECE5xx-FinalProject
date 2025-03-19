@@ -1,0 +1,6 @@
+15:15:11 **** Incremental Build of configuration Debug for project DLapp9_system ****
+make all 
+Skipping SD card image generation. Reason: "The system project only has applications for microblaze processors."
+
+15:15:12 Build Finished (took 108ms)
+

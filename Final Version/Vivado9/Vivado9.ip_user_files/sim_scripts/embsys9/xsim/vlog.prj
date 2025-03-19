@@ -1,0 +1,11 @@
+verilog xil_defaultlib --include "../../../../Vivado9.gen/sources_1/bd/embsys9/ipshared/ec67/hdl" --include "../../../../Vivado9.gen/sources_1/bd/embsys9/ipshared/7698" \
+"../../../bd/embsys9/ip/embsys9_lmb_bram_1/sim/embsys9_lmb_bram_1.v" \
+"../../../bd/embsys9/ip/embsys9_xbar_1/sim/embsys9_xbar_1.v" \
+"../../../bd/embsys9/ip/embsys9_clk_wiz_1_1/embsys9_clk_wiz_1_1_clk_wiz.v" \
+"../../../bd/embsys9/ip/embsys9_clk_wiz_1_1/embsys9_clk_wiz_1_1.v" \
+"../../../bd/embsys9/ip/embsys9_reset_inv_0_1/sim/embsys9_reset_inv_0_1.v" \
+"../../../bd/embsys9/sim/embsys9.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

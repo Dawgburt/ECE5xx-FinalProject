@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="DLapp9_system-bitFile" value="${project_loc:DLapp9}/_ide/bitstream/embsys9_wrapper.bit"/>
+	<item key="DLapp9_system-bmmFile" value="${project_loc:DLapp9}/_ide/bitstream/embsys9_wrapper.mmi"/>
+	<item key="DLapp9_system-target" value="Local"/>
+	<item key="DLapp9_system-device" value="Digilent Nexys A7 -100T 210292BB2FBAA/2-xc7a100t"/>
+	<item key="DLapp9_system-partial_bit" value="false"/>
+	<item key="DLapp9_system-skip_rev_check" value="false"/>
+	<item key="programfpga.sdxproject" value="DLapp911_system"/>
+	<item key="DLapp9_system-microblaze_0-initElf" value="bootloop"/>
+	<item key="devices_info_Local" value="{&quot;cables&quot;:[{&quot;name&quot;:&quot;Digilent Nexys A7 -100T 210292BB2FBAA&quot;,&quot;indexContextMap&quot;:{&quot;2&quot;:&quot;jsn-Nexys A7 -100T-210292BB2FBAA-13631093-0&quot;}}]}"/>
+	<item key="DLapp911_system-bitFile" value="${project_loc:DLapp911}/_ide/bitstream/embsys9_wrapper.bit"/>
+	<item key="DLapp911_system-bmmFile" value="${project_loc:DLapp911}/_ide/bitstream/embsys9_wrapper.mmi"/>
+	<item key="DLapp911_system-target" value="Local"/>
+	<item key="DLapp911_system-device" value="Auto Detect"/>
+	<item key="DLapp911_system-partial_bit" value="false"/>
+	<item key="DLapp911_system-skip_rev_check" value="false"/>
+	<item key="DLapp911_system-microblaze_0-initElf" value="bootloop"/>
+</section>

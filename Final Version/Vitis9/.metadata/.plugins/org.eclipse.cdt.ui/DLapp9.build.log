@@ -1,0 +1,26 @@
+17:24:42 **** Incremental Build of configuration Debug for project DLapp9 ****
+make all 
+'Building file: ../src/DLmain.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/DLmain.o" -IC:/SimpleLock/Vitis9/DLplatform9/export/DLplatform9/sw/DLplatform9/standalone_domain/bspinclude/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/DLmain.d" -MT"src/DLmain.o" -o "src/DLmain.o" "../src/DLmain.c"
+'Finished building: ../src/DLmain.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -IC:/SimpleLock/Vitis9/DLplatform9/export/DLplatform9/sw/DLplatform9/standalone_domain/bspinclude/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: DLapp9.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LC:/SimpleLock/Vitis9/DLplatform9/export/DLplatform9/sw/DLplatform9/standalone_domain/bsplib/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "DLapp9.elf"  ./src/DLmain.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: DLapp9.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size DLapp9.elf  |tee "DLapp9.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   4036	    324	   3216	   7576	   1d98	DLapp9.elf
+'Finished building: DLapp9.elf.size'
+' '
+
+17:24:43 Build Finished (took 973ms)
+

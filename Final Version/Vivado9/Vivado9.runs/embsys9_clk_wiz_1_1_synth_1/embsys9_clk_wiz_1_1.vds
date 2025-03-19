@@ -1,0 +1,22 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Tue Mar 18 14:34:27 2025
+# Process ID: 56608
+# Current directory: C:/SimpleLock/Vivado9/Vivado9.runs/embsys9_clk_wiz_1_1_synth_1
+# Command line: vivado.exe -log embsys9_clk_wiz_1_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source embsys9_clk_wiz_1_1.tcl
+# Log file: C:/SimpleLock/Vivado9/Vivado9.runs/embsys9_clk_wiz_1_1_synth_1/embsys9_clk_wiz_1_1.vds
+# Journal file: C:/SimpleLock/Vivado9/Vivado9.runs/embsys9_clk_wiz_1_1_synth_1\vivado.jou
+# Running On: Dawgburts-Mothership, OS: Windows, CPU Frequency: 2918 MHz, CPU Physical cores: 14, Host memory: 34003 MB
+#-----------------------------------------------------------
+source embsys9_clk_wiz_1_1.tcl -notrace
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: embsys9_clk_wiz_1_1
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry be7907002b12106f to dir: C:/SimpleLock/Vivado9/Vivado9.runs/embsys9_clk_wiz_1_1_synth_1
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/SimpleLock/Vivado9/Vivado9.cache/ip/2022.2/b/e/be7907002b12106f/embsys9_clk_wiz_1_1.dcp to C:/SimpleLock/Vivado9/Vivado9.runs/embsys9_clk_wiz_1_1_synth_1/embsys9_clk_wiz_1_1.dcp.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/SimpleLock/Vivado9/Vivado9.cache/ip/2022.2/b/e/be7907002b12106f/embsys9_clk_wiz_1_1_sim_netlist.v to C:/SimpleLock/Vivado9/Vivado9.runs/embsys9_clk_wiz_1_1_synth_1/embsys9_clk_wiz_1_1_sim_netlist.v.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/SimpleLock/Vivado9/Vivado9.cache/ip/2022.2/b/e/be7907002b12106f/embsys9_clk_wiz_1_1_sim_netlist.vhdl to C:/SimpleLock/Vivado9/Vivado9.runs/embsys9_clk_wiz_1_1_synth_1/embsys9_clk_wiz_1_1_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/SimpleLock/Vivado9/Vivado9.cache/ip/2022.2/b/e/be7907002b12106f/embsys9_clk_wiz_1_1_stub.v to C:/SimpleLock/Vivado9/Vivado9.runs/embsys9_clk_wiz_1_1_synth_1/embsys9_clk_wiz_1_1_stub.v.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/SimpleLock/Vivado9/Vivado9.cache/ip/2022.2/b/e/be7907002b12106f/embsys9_clk_wiz_1_1_stub.vhdl to C:/SimpleLock/Vivado9/Vivado9.runs/embsys9_clk_wiz_1_1_synth_1/embsys9_clk_wiz_1_1_stub.vhdl.
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP embsys9_clk_wiz_1_1, cache-ID = be7907002b12106f.
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 18 14:34:34 2025...

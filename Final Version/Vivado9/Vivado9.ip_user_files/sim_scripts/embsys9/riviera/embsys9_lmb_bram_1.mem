@@ -1,0 +1,16 @@
+// Mem file initialization records.
+//
+// SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+// Vivado v2022.2 (64-bit)
+// Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+// Created on Tuesday March 18, 2025 - 05:16:38 pm, from:
+//
+//     Map file     - c:\SimpleLock\Vivado9\Vivado9.gen\sources_1\bd\embsys9\embsys9.bmm
+//     Data file(s) - c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/ip/embsys9_microblaze_0_0/data/mb_bootloop_le.elf
+//
+// Address space 'embsys9_i_microblaze_0.embsys9_i_microblaze_0_local_memory_lmb_bram_64K_2_ADDR_SPACE', bit lane [31:0].
+//
+// Bus width = 32 bits, number of bus blocks = 1.
+
+@00000000
+    B8000000

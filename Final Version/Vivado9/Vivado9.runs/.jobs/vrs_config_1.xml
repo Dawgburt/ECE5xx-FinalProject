@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="embsys9_microblaze_0_0_synth_1" LaunchDir="C:/SimpleLock/Vivado9/Vivado9.runs/embsys9_microblaze_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="embsys9_dlmb_v10_0_synth_1" LaunchDir="C:/SimpleLock/Vivado9/Vivado9.runs/embsys9_dlmb_v10_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="embsys9_ilmb_v10_0_synth_1" LaunchDir="C:/SimpleLock/Vivado9/Vivado9.runs/embsys9_ilmb_v10_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="embsys9_dlmb_bram_if_cntlr_0_synth_1" LaunchDir="C:/SimpleLock/Vivado9/Vivado9.runs/embsys9_dlmb_bram_if_cntlr_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="embsys9_ilmb_bram_if_cntlr_0_synth_1" LaunchDir="C:/SimpleLock/Vivado9/Vivado9.runs/embsys9_ilmb_bram_if_cntlr_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="embsys9_lmb_bram_0_synth_1" LaunchDir="C:/SimpleLock/Vivado9/Vivado9.runs/embsys9_lmb_bram_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="embsys9_xbar_0_synth_1" LaunchDir="C:/SimpleLock/Vivado9/Vivado9.runs/embsys9_xbar_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="embsys9_mdm_1_0_synth_1" LaunchDir="C:/SimpleLock/Vivado9/Vivado9.runs/embsys9_mdm_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="embsys9_clk_wiz_1_0_synth_1" LaunchDir="C:/SimpleLock/Vivado9/Vivado9.runs/embsys9_clk_wiz_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="embsys9_rst_clk_wiz_1_100M_0_synth_1" LaunchDir="C:/SimpleLock/Vivado9/Vivado9.runs/embsys9_rst_clk_wiz_1_100M_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="embsys9_axi_gpio_0_0_synth_1" LaunchDir="C:/SimpleLock/Vivado9/Vivado9.runs/embsys9_axi_gpio_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="embsys9_axi_uartlite_0_0_synth_1" LaunchDir="C:/SimpleLock/Vivado9/Vivado9.runs/embsys9_axi_uartlite_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="embsys9_reset_inv_0_0_synth_1" LaunchDir="C:/SimpleLock/Vivado9/Vivado9.runs/embsys9_reset_inv_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+		<Parameter Name="runs.enableClusterConf" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+

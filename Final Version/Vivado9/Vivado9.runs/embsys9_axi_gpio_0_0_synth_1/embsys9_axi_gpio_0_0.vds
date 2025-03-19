@@ -1,0 +1,22 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Tue Mar 18 15:49:10 2025
+# Process ID: 66252
+# Current directory: C:/SimpleLock/Vivado9/Vivado9.runs/embsys9_axi_gpio_0_0_synth_1
+# Command line: vivado.exe -log embsys9_axi_gpio_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source embsys9_axi_gpio_0_0.tcl
+# Log file: C:/SimpleLock/Vivado9/Vivado9.runs/embsys9_axi_gpio_0_0_synth_1/embsys9_axi_gpio_0_0.vds
+# Journal file: C:/SimpleLock/Vivado9/Vivado9.runs/embsys9_axi_gpio_0_0_synth_1\vivado.jou
+# Running On: Dawgburts-Mothership, OS: Windows, CPU Frequency: 2918 MHz, CPU Physical cores: 14, Host memory: 34003 MB
+#-----------------------------------------------------------
+source embsys9_axi_gpio_0_0.tcl -notrace
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: embsys9_axi_gpio_0_0
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry c49c671014e699a9 to dir: C:/SimpleLock/Vivado9/Vivado9.runs/embsys9_axi_gpio_0_0_synth_1
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/SimpleLock/Vivado9/Vivado9.cache/ip/2022.2/c/4/c49c671014e699a9/embsys9_axi_gpio_0_0.dcp to C:/SimpleLock/Vivado9/Vivado9.runs/embsys9_axi_gpio_0_0_synth_1/embsys9_axi_gpio_0_0.dcp.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/SimpleLock/Vivado9/Vivado9.cache/ip/2022.2/c/4/c49c671014e699a9/embsys9_axi_gpio_0_0_sim_netlist.v to C:/SimpleLock/Vivado9/Vivado9.runs/embsys9_axi_gpio_0_0_synth_1/embsys9_axi_gpio_0_0_sim_netlist.v.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/SimpleLock/Vivado9/Vivado9.cache/ip/2022.2/c/4/c49c671014e699a9/embsys9_axi_gpio_0_0_sim_netlist.vhdl to C:/SimpleLock/Vivado9/Vivado9.runs/embsys9_axi_gpio_0_0_synth_1/embsys9_axi_gpio_0_0_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/SimpleLock/Vivado9/Vivado9.cache/ip/2022.2/c/4/c49c671014e699a9/embsys9_axi_gpio_0_0_stub.v to C:/SimpleLock/Vivado9/Vivado9.runs/embsys9_axi_gpio_0_0_synth_1/embsys9_axi_gpio_0_0_stub.v.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/SimpleLock/Vivado9/Vivado9.cache/ip/2022.2/c/4/c49c671014e699a9/embsys9_axi_gpio_0_0_stub.vhdl to C:/SimpleLock/Vivado9/Vivado9.runs/embsys9_axi_gpio_0_0_synth_1/embsys9_axi_gpio_0_0_stub.vhdl.
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP embsys9_axi_gpio_0_0, cache-ID = c49c671014e699a9.
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 18 15:49:17 2025...
