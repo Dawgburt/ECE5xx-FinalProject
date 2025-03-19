@@ -23,9 +23,15 @@ ChatGPT: Debugging adn Code Generation
 HiveMQ for having a nice, free, public MQTT broker.
 """
 
+import machine
+from machine import Pin
 import time
 from umqtt.simple import MQTTClient
 import network
+
+#Initialize RED LED (GPIO 32, Pin no. 20)
+led = machine.Pin(32, machine.Pin.OUT)
+led.value(0)
 
 #Wi Fi List
 """
@@ -103,9 +109,15 @@ def pin_callback(topic, msg):
     print(f"Received PIN: {received_pin}")
     
     if received_pin == EXPECTED_PIN:
-        lock_status = "Match Found"
+        lock_status = "Match Found, Opening Lock"
+        led.value(1)
+        mqtt_client.publish('ECE544x558/FP/App/RemoteKey/LockStatus', lock_status, qos=1, retain=False)  # Publish Match Found immediately
+        time.sleep(10)  # Simulate unlocking
+        lock_status = "Lock Closed"
+        led.value(0)
     else:
         lock_status  = "No Match Found"
+        mqtt_client.publish('ECE544x558/FP/App/RemoteKey/LockStatus', lock_status, qos=1, retain=False)  # Publish Match Found immediately
 
 mqtt_client.set_callback(pin_callback)
 mqtt_client.subscribe('ECE544x558/FP/App/RemoteKey/PIN')
@@ -127,6 +139,8 @@ TCP Port (1883) Working Code:
 
 
 """
+
+
 
 
 
