@@ -108,7 +108,7 @@ def pin_callback(topic, msg):
         lock_status  = "No Match Found"
 
 mqtt_client.set_callback(pin_callback)
-mqtt_client.subscribe('ECE544x558/FP/App/RemoteKey/PIN')
+mqtt_client.subscribe('ECE544x558/FP/App/RemoteKey/LockStatus')
 
 #Infinite loop, getting new environmental readings
 #every 5 seconds
@@ -116,7 +116,7 @@ while True:
     #Handle incoming message for Getting Pin
     mqtt_client.check_msg()
     print(f"Current Lock Status: {lock_status}")
-    mqtt_client.publish('ECE544x558/FP/App/RemoteKey/LockStatus', lock_status, qos=1, retain=False) #Qos of 1 for gaurenteed delivery. It unlocks an important door after all
+    mqtt_client.publish('nECE544x558/FP/App/RemoteKey/LockStatus', lock_status, qos=1, retain=False) #Qos of 1 for gaurenteed delivery. It unlocks an important door after all
 
     #Publish new results 5 seconds later
     time.sleep(5)
@@ -127,7 +127,6 @@ TCP Port (1883) Working Code:
 
 
 """
-
 
 
 
