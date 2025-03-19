@@ -49,7 +49,9 @@ fun LoginCheckDBSplashScreen(navController: NavController, username: String, pas
             isError.value = false
             // Navigate to next screen
             kotlinx.coroutines.delay(1000) // Let user read success message
-            navController.navigate(Screen.SendPINandLockStatusScreen.route)
+            navController.navigate(Screen.SendPINandLockStatusScreen.route){
+                popUpTo(Screen.LoginCheckDBSplashScreen.route) { inclusive = true }
+            }
         } else {
             feedbackMessage.value = "Login Failed"
             isError.value = true
