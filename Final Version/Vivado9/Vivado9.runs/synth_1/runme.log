@@ -1,0 +1,389 @@
+
+*** Running vivado
+    with args -log embsys9_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source embsys9_wrapper.tcl
+
+
+
+****** Vivado v2022.2 (64-bit)
+  **** SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source embsys9_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.2/data/ip'.
+Command: read_checkpoint -auto_incremental -incremental C:/SimpleLock/Vivado9/Vivado9.srcs/utils_1/imports/synth_1/embsys9_wrapper.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/SimpleLock/Vivado9/Vivado9.srcs/utils_1/imports/synth_1/embsys9_wrapper.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top embsys9_wrapper -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 66000
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1265.242 ; gain = 408.375
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'embsys9_wrapper' [C:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/hdl/embsys9_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'embsys9' [c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/synth/embsys9.v:12]
+INFO: [Synth 8-6157] synthesizing module 'embsys9_axi_gpio_0_0' [C:/SimpleLock/Vivado9/Vivado9.runs/synth_1/.Xil/Vivado-68644-Dawgburts-Mothership/realtime/embsys9_axi_gpio_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'embsys9_axi_gpio_0_0' (0#1) [C:/SimpleLock/Vivado9/Vivado9.runs/synth_1/.Xil/Vivado-68644-Dawgburts-Mothership/realtime/embsys9_axi_gpio_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'embsys9_axi_uartlite_0_0' [C:/SimpleLock/Vivado9/Vivado9.runs/synth_1/.Xil/Vivado-68644-Dawgburts-Mothership/realtime/embsys9_axi_uartlite_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'embsys9_axi_uartlite_0_0' (0#1) [C:/SimpleLock/Vivado9/Vivado9.runs/synth_1/.Xil/Vivado-68644-Dawgburts-Mothership/realtime/embsys9_axi_uartlite_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'interrupt' of module 'embsys9_axi_uartlite_0_0' is unconnected for instance 'axi_uartlite_0' [c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/synth/embsys9.v:171]
+WARNING: [Synth 8-7023] instance 'axi_uartlite_0' of module 'embsys9_axi_uartlite_0_0' has 22 connections declared, but only 21 given [c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/synth/embsys9.v:171]
+INFO: [Synth 8-6157] synthesizing module 'embsys9_clk_wiz_1_1' [C:/SimpleLock/Vivado9/Vivado9.runs/synth_1/.Xil/Vivado-68644-Dawgburts-Mothership/realtime/embsys9_clk_wiz_1_1_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'embsys9_clk_wiz_1_1' (0#1) [C:/SimpleLock/Vivado9/Vivado9.runs/synth_1/.Xil/Vivado-68644-Dawgburts-Mothership/realtime/embsys9_clk_wiz_1_1_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'embsys9_mdm_1_1' [C:/SimpleLock/Vivado9/Vivado9.runs/synth_1/.Xil/Vivado-68644-Dawgburts-Mothership/realtime/embsys9_mdm_1_1_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'embsys9_mdm_1_1' (0#1) [C:/SimpleLock/Vivado9/Vivado9.runs/synth_1/.Xil/Vivado-68644-Dawgburts-Mothership/realtime/embsys9_mdm_1_1_stub.v:5]
+WARNING: [Synth 8-7071] port 'Interrupt' of module 'embsys9_mdm_1_1' is unconnected for instance 'mdm_1' [c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/synth/embsys9.v:198]
+WARNING: [Synth 8-7023] instance 'mdm_1' of module 'embsys9_mdm_1_1' has 30 connections declared, but only 29 given [c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/synth/embsys9.v:198]
+INFO: [Synth 8-6157] synthesizing module 'embsys9_microblaze_0_0' [C:/SimpleLock/Vivado9/Vivado9.runs/synth_1/.Xil/Vivado-68644-Dawgburts-Mothership/realtime/embsys9_microblaze_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'embsys9_microblaze_0_0' (0#1) [C:/SimpleLock/Vivado9/Vivado9.runs/synth_1/.Xil/Vivado-68644-Dawgburts-Mothership/realtime/embsys9_microblaze_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'Interrupt_Ack' of module 'embsys9_microblaze_0_0' is unconnected for instance 'microblaze_0' [c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/synth/embsys9.v:230]
+WARNING: [Synth 8-7023] instance 'microblaze_0' of module 'embsys9_microblaze_0_0' has 52 connections declared, but only 51 given [c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/synth/embsys9.v:230]
+INFO: [Synth 8-6157] synthesizing module 'embsys9_microblaze_0_axi_periph_1' [c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/synth/embsys9.v:399]
+INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_D3NFFJ' [c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/synth/embsys9.v:977]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_D3NFFJ' (0#1) [c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/synth/embsys9.v:977]
+INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_1ARRQ1O' [c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/synth/embsys9.v:1109]
+INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_1ARRQ1O' (0#1) [c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/synth/embsys9.v:1109]
+INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_1XNM68O' [c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/synth/embsys9.v:1241]
+INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_1XNM68O' (0#1) [c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/synth/embsys9.v:1241]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_1AMG4LF' [c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/synth/embsys9.v:1607]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_1AMG4LF' (0#1) [c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/synth/embsys9.v:1607]
+INFO: [Synth 8-6157] synthesizing module 'embsys9_xbar_1' [C:/SimpleLock/Vivado9/Vivado9.runs/synth_1/.Xil/Vivado-68644-Dawgburts-Mothership/realtime/embsys9_xbar_1_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'embsys9_xbar_1' (0#1) [C:/SimpleLock/Vivado9/Vivado9.runs/synth_1/.Xil/Vivado-68644-Dawgburts-Mothership/realtime/embsys9_xbar_1_stub.v:5]
+WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'embsys9_xbar_1' is unconnected for instance 'xbar' [c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/synth/embsys9.v:936]
+WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'embsys9_xbar_1' is unconnected for instance 'xbar' [c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/synth/embsys9.v:936]
+WARNING: [Synth 8-7023] instance 'xbar' of module 'embsys9_xbar_1' has 40 connections declared, but only 38 given [c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/synth/embsys9.v:936]
+INFO: [Synth 8-6155] done synthesizing module 'embsys9_microblaze_0_axi_periph_1' (0#1) [c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/synth/embsys9.v:399]
+INFO: [Synth 8-6157] synthesizing module 'microblaze_0_local_memory_imp_12WHZZZ' [c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/synth/embsys9.v:1373]
+INFO: [Synth 8-6157] synthesizing module 'embsys9_dlmb_bram_if_cntlr_1' [C:/SimpleLock/Vivado9/Vivado9.runs/synth_1/.Xil/Vivado-68644-Dawgburts-Mothership/realtime/embsys9_dlmb_bram_if_cntlr_1_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'embsys9_dlmb_bram_if_cntlr_1' (0#1) [C:/SimpleLock/Vivado9/Vivado9.runs/synth_1/.Xil/Vivado-68644-Dawgburts-Mothership/realtime/embsys9_dlmb_bram_if_cntlr_1_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'embsys9_dlmb_v10_1' [C:/SimpleLock/Vivado9/Vivado9.runs/synth_1/.Xil/Vivado-68644-Dawgburts-Mothership/realtime/embsys9_dlmb_v10_1_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'embsys9_dlmb_v10_1' (0#1) [C:/SimpleLock/Vivado9/Vivado9.runs/synth_1/.Xil/Vivado-68644-Dawgburts-Mothership/realtime/embsys9_dlmb_v10_1_stub.v:5]
+WARNING: [Synth 8-7071] port 'LMB_Rst' of module 'embsys9_dlmb_v10_1' is unconnected for instance 'dlmb_v10' [c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/synth/embsys9.v:1519]
+WARNING: [Synth 8-7023] instance 'dlmb_v10' of module 'embsys9_dlmb_v10_1' has 25 connections declared, but only 24 given [c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/synth/embsys9.v:1519]
+INFO: [Synth 8-6157] synthesizing module 'embsys9_ilmb_bram_if_cntlr_1' [C:/SimpleLock/Vivado9/Vivado9.runs/synth_1/.Xil/Vivado-68644-Dawgburts-Mothership/realtime/embsys9_ilmb_bram_if_cntlr_1_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'embsys9_ilmb_bram_if_cntlr_1' (0#1) [C:/SimpleLock/Vivado9/Vivado9.runs/synth_1/.Xil/Vivado-68644-Dawgburts-Mothership/realtime/embsys9_ilmb_bram_if_cntlr_1_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'embsys9_ilmb_v10_1' [C:/SimpleLock/Vivado9/Vivado9.runs/synth_1/.Xil/Vivado-68644-Dawgburts-Mothership/realtime/embsys9_ilmb_v10_1_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'embsys9_ilmb_v10_1' (0#1) [C:/SimpleLock/Vivado9/Vivado9.runs/synth_1/.Xil/Vivado-68644-Dawgburts-Mothership/realtime/embsys9_ilmb_v10_1_stub.v:5]
+WARNING: [Synth 8-7071] port 'LMB_Rst' of module 'embsys9_ilmb_v10_1' is unconnected for instance 'ilmb_v10' [c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/synth/embsys9.v:1565]
+WARNING: [Synth 8-7023] instance 'ilmb_v10' of module 'embsys9_ilmb_v10_1' has 25 connections declared, but only 24 given [c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/synth/embsys9.v:1565]
+INFO: [Synth 8-6157] synthesizing module 'embsys9_lmb_bram_1' [C:/SimpleLock/Vivado9/Vivado9.runs/synth_1/.Xil/Vivado-68644-Dawgburts-Mothership/realtime/embsys9_lmb_bram_1_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'embsys9_lmb_bram_1' (0#1) [C:/SimpleLock/Vivado9/Vivado9.runs/synth_1/.Xil/Vivado-68644-Dawgburts-Mothership/realtime/embsys9_lmb_bram_1_stub.v:5]
+WARNING: [Synth 8-7071] port 'rsta_busy' of module 'embsys9_lmb_bram_1' is unconnected for instance 'lmb_bram' [c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/synth/embsys9.v:1590]
+WARNING: [Synth 8-7071] port 'rstb_busy' of module 'embsys9_lmb_bram_1' is unconnected for instance 'lmb_bram' [c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/synth/embsys9.v:1590]
+WARNING: [Synth 8-7023] instance 'lmb_bram' of module 'embsys9_lmb_bram_1' has 16 connections declared, but only 14 given [c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/synth/embsys9.v:1590]
+INFO: [Synth 8-6155] done synthesizing module 'microblaze_0_local_memory_imp_12WHZZZ' (0#1) [c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/synth/embsys9.v:1373]
+INFO: [Synth 8-6157] synthesizing module 'embsys9_reset_inv_0_1' [C:/SimpleLock/Vivado9/Vivado9.runs/synth_1/.Xil/Vivado-68644-Dawgburts-Mothership/realtime/embsys9_reset_inv_0_1_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'embsys9_reset_inv_0_1' (0#1) [C:/SimpleLock/Vivado9/Vivado9.runs/synth_1/.Xil/Vivado-68644-Dawgburts-Mothership/realtime/embsys9_reset_inv_0_1_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'embsys9_rst_clk_wiz_1_100M_1' [C:/SimpleLock/Vivado9/Vivado9.runs/synth_1/.Xil/Vivado-68644-Dawgburts-Mothership/realtime/embsys9_rst_clk_wiz_1_100M_1_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'embsys9_rst_clk_wiz_1_100M_1' (0#1) [C:/SimpleLock/Vivado9/Vivado9.runs/synth_1/.Xil/Vivado-68644-Dawgburts-Mothership/realtime/embsys9_rst_clk_wiz_1_100M_1_stub.v:5]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'embsys9_rst_clk_wiz_1_100M_1' is unconnected for instance 'rst_clk_wiz_1_100M' [c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/synth/embsys9.v:388]
+WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'embsys9_rst_clk_wiz_1_100M_1' is unconnected for instance 'rst_clk_wiz_1_100M' [c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/synth/embsys9.v:388]
+WARNING: [Synth 8-7023] instance 'rst_clk_wiz_1_100M' of module 'embsys9_rst_clk_wiz_1_100M_1' has 10 connections declared, but only 8 given [c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/synth/embsys9.v:388]
+INFO: [Synth 8-6155] done synthesizing module 'embsys9' (0#1) [c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/synth/embsys9.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'embsys9_wrapper' (0#1) [C:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/hdl/embsys9_wrapper.v:12]
+WARNING: [Synth 8-7129] Port M_ACLK in module s00_couplers_imp_1AMG4LF is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ARESETN in module s00_couplers_imp_1AMG4LF is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ACLK in module s00_couplers_imp_1AMG4LF is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ARESETN in module s00_couplers_imp_1AMG4LF is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ACLK in module m02_couplers_imp_1XNM68O is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ARESETN in module m02_couplers_imp_1XNM68O is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ACLK in module m02_couplers_imp_1XNM68O is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ARESETN in module m02_couplers_imp_1XNM68O is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ACLK in module m01_couplers_imp_1ARRQ1O is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ARESETN in module m01_couplers_imp_1ARRQ1O is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ACLK in module m01_couplers_imp_1ARRQ1O is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ARESETN in module m01_couplers_imp_1ARRQ1O is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ACLK in module m00_couplers_imp_D3NFFJ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ARESETN in module m00_couplers_imp_D3NFFJ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ACLK in module m00_couplers_imp_D3NFFJ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ARESETN in module m00_couplers_imp_D3NFFJ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_ACLK in module embsys9_microblaze_0_axi_periph_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_ARESETN in module embsys9_microblaze_0_axi_periph_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M01_ACLK in module embsys9_microblaze_0_axi_periph_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M01_ARESETN in module embsys9_microblaze_0_axi_periph_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M02_ACLK in module embsys9_microblaze_0_axi_periph_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M02_ARESETN in module embsys9_microblaze_0_axi_periph_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S00_ACLK in module embsys9_microblaze_0_axi_periph_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S00_ARESETN in module embsys9_microblaze_0_axi_periph_1 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1362.578 ; gain = 505.711
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1362.578 ; gain = 505.711
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1362.578 ; gain = 505.711
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1362.578 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/ip/embsys9_microblaze_0_0/embsys9_microblaze_0_0/embsys9_microblaze_0_0_in_context.xdc] for cell 'embsys9_i/microblaze_0'
+Finished Parsing XDC File [c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/ip/embsys9_microblaze_0_0/embsys9_microblaze_0_0/embsys9_microblaze_0_0_in_context.xdc] for cell 'embsys9_i/microblaze_0'
+Parsing XDC File [c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/ip/embsys9_axi_gpio_0_0/embsys9_axi_gpio_0_0/embsys9_axi_gpio_0_0_in_context.xdc] for cell 'embsys9_i/axi_gpio_0'
+Finished Parsing XDC File [c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/ip/embsys9_axi_gpio_0_0/embsys9_axi_gpio_0_0/embsys9_axi_gpio_0_0_in_context.xdc] for cell 'embsys9_i/axi_gpio_0'
+Parsing XDC File [c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/ip/embsys9_axi_uartlite_0_0/embsys9_axi_uartlite_0_0/embsys9_axi_uartlite_0_0_in_context.xdc] for cell 'embsys9_i/axi_uartlite_0'
+Finished Parsing XDC File [c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/ip/embsys9_axi_uartlite_0_0/embsys9_axi_uartlite_0_0/embsys9_axi_uartlite_0_0_in_context.xdc] for cell 'embsys9_i/axi_uartlite_0'
+Parsing XDC File [c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/ip/embsys9_dlmb_v10_1/embsys9_dlmb_v10_1/embsys9_ilmb_v10_0_in_context.xdc] for cell 'embsys9_i/microblaze_0_local_memory/dlmb_v10'
+Finished Parsing XDC File [c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/ip/embsys9_dlmb_v10_1/embsys9_dlmb_v10_1/embsys9_ilmb_v10_0_in_context.xdc] for cell 'embsys9_i/microblaze_0_local_memory/dlmb_v10'
+Parsing XDC File [c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/ip/embsys9_ilmb_v10_1/embsys9_ilmb_v10_1/embsys9_ilmb_v10_0_in_context.xdc] for cell 'embsys9_i/microblaze_0_local_memory/ilmb_v10'
+Finished Parsing XDC File [c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/ip/embsys9_ilmb_v10_1/embsys9_ilmb_v10_1/embsys9_ilmb_v10_0_in_context.xdc] for cell 'embsys9_i/microblaze_0_local_memory/ilmb_v10'
+Parsing XDC File [c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/ip/embsys9_dlmb_bram_if_cntlr_1/embsys9_dlmb_bram_if_cntlr_1/embsys9_dlmb_bram_if_cntlr_0_in_context.xdc] for cell 'embsys9_i/microblaze_0_local_memory/dlmb_bram_if_cntlr'
+Finished Parsing XDC File [c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/ip/embsys9_dlmb_bram_if_cntlr_1/embsys9_dlmb_bram_if_cntlr_1/embsys9_dlmb_bram_if_cntlr_0_in_context.xdc] for cell 'embsys9_i/microblaze_0_local_memory/dlmb_bram_if_cntlr'
+Parsing XDC File [c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/ip/embsys9_ilmb_bram_if_cntlr_1/embsys9_ilmb_bram_if_cntlr_1/embsys9_ilmb_bram_if_cntlr_0_in_context.xdc] for cell 'embsys9_i/microblaze_0_local_memory/ilmb_bram_if_cntlr'
+Finished Parsing XDC File [c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/ip/embsys9_ilmb_bram_if_cntlr_1/embsys9_ilmb_bram_if_cntlr_1/embsys9_ilmb_bram_if_cntlr_0_in_context.xdc] for cell 'embsys9_i/microblaze_0_local_memory/ilmb_bram_if_cntlr'
+Parsing XDC File [c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/ip/embsys9_lmb_bram_1/embsys9_lmb_bram_1/embsys9_lmb_bram_1_in_context.xdc] for cell 'embsys9_i/microblaze_0_local_memory/lmb_bram'
+Finished Parsing XDC File [c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/ip/embsys9_lmb_bram_1/embsys9_lmb_bram_1/embsys9_lmb_bram_1_in_context.xdc] for cell 'embsys9_i/microblaze_0_local_memory/lmb_bram'
+Parsing XDC File [c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/ip/embsys9_xbar_1/embsys9_xbar_1/embsys9_xbar_0_in_context.xdc] for cell 'embsys9_i/microblaze_0_axi_periph/xbar'
+Finished Parsing XDC File [c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/ip/embsys9_xbar_1/embsys9_xbar_1/embsys9_xbar_0_in_context.xdc] for cell 'embsys9_i/microblaze_0_axi_periph/xbar'
+Parsing XDC File [c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/ip/embsys9_mdm_1_1/embsys9_mdm_1_1/embsys9_mdm_1_0_in_context.xdc] for cell 'embsys9_i/mdm_1'
+Finished Parsing XDC File [c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/ip/embsys9_mdm_1_1/embsys9_mdm_1_1/embsys9_mdm_1_0_in_context.xdc] for cell 'embsys9_i/mdm_1'
+Parsing XDC File [c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/ip/embsys9_clk_wiz_1_1/embsys9_clk_wiz_1_1/embsys9_clk_wiz_1_1_in_context.xdc] for cell 'embsys9_i/clk_wiz_1'
+Finished Parsing XDC File [c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/ip/embsys9_clk_wiz_1_1/embsys9_clk_wiz_1_1/embsys9_clk_wiz_1_1_in_context.xdc] for cell 'embsys9_i/clk_wiz_1'
+Parsing XDC File [c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/ip/embsys9_rst_clk_wiz_1_100M_1/embsys9_rst_clk_wiz_1_100M_1/embsys9_rst_clk_wiz_1_100M_0_in_context.xdc] for cell 'embsys9_i/rst_clk_wiz_1_100M'
+Finished Parsing XDC File [c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/ip/embsys9_rst_clk_wiz_1_100M_1/embsys9_rst_clk_wiz_1_100M_1/embsys9_rst_clk_wiz_1_100M_0_in_context.xdc] for cell 'embsys9_i/rst_clk_wiz_1_100M'
+Parsing XDC File [c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/ip/embsys9_reset_inv_0_1/embsys9_reset_inv_0_1/embsys9_reset_inv_0_0_in_context.xdc] for cell 'embsys9_i/reset_inv_0'
+Finished Parsing XDC File [c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/ip/embsys9_reset_inv_0_1/embsys9_reset_inv_0_1/embsys9_reset_inv_0_0_in_context.xdc] for cell 'embsys9_i/reset_inv_0'
+Parsing XDC File [C:/SimpleLock/Vivado9/Vivado9.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc]
+CRITICAL WARNING: [Common 17-161] Invalid option value '#ja[1]' specified for 'objects'. [C:/SimpleLock/Vivado9/Vivado9.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:104]
+CRITICAL WARNING: [Common 17-161] Invalid option value '#ja[3]' specified for 'objects'. [C:/SimpleLock/Vivado9/Vivado9.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:107]
+WARNING: [Vivado 12-584] No ports matched 'sclk_io'. [C:/SimpleLock/Vivado9/Vivado9.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:269]
+WARNING: [Vivado 12-584] No ports matched 'sda_io'. [C:/SimpleLock/Vivado9/Vivado9.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:270]
+WARNING: [Vivado 12-584] No ports matched 'sclk_io'. [C:/SimpleLock/Vivado9/Vivado9.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:272]
+WARNING: [Vivado 12-584] No ports matched 'sda_io'. [C:/SimpleLock/Vivado9/Vivado9.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:273]
+WARNING: [Vivado 12-584] No ports matched 'hc05_uart_rxd'. [C:/SimpleLock/Vivado9/Vivado9.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:276]
+WARNING: [Vivado 12-584] No ports matched 'hc05_uart_rxd'. [C:/SimpleLock/Vivado9/Vivado9.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:277]
+CRITICAL WARNING: [Common 17-161] Invalid option value '##' specified for 'objects'. [C:/SimpleLock/Vivado9/Vivado9.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:277]
+WARNING: [Vivado 12-584] No ports matched 'hc05_uart_txd'. [C:/SimpleLock/Vivado9/Vivado9.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:279]
+WARNING: [Vivado 12-584] No ports matched 'hc05_uart_txd'. [C:/SimpleLock/Vivado9/Vivado9.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:280]
+CRITICAL WARNING: [Common 17-161] Invalid option value '##' specified for 'objects'. [C:/SimpleLock/Vivado9/Vivado9.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:280]
+Finished Parsing XDC File [C:/SimpleLock/Vivado9/Vivado9.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/SimpleLock/Vivado9/Vivado9.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/embsys9_wrapper_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/SimpleLock/Vivado9/Vivado9.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/embsys9_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/embsys9_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/SimpleLock/Vivado9/Vivado9.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/SimpleLock/Vivado9/Vivado9.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1362.578 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1362.578 ; gain = 0.000
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'embsys9_i/microblaze_0_local_memory/lmb_bram' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1362.578 ; gain = 505.711
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1362.578 ; gain = 505.711
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for sys_clock. (constraint file  c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/ip/embsys9_clk_wiz_1_1/embsys9_clk_wiz_1_1/embsys9_clk_wiz_1_1_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for sys_clock. (constraint file  c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/ip/embsys9_clk_wiz_1_1/embsys9_clk_wiz_1_1/embsys9_clk_wiz_1_1_in_context.xdc, line 4).
+Applied set_property KEEP_HIERARCHY = SOFT for embsys9_i. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for embsys9_i/microblaze_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for embsys9_i/axi_gpio_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for embsys9_i/axi_uartlite_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for embsys9_i/microblaze_0_local_memory/dlmb_v10. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for embsys9_i/microblaze_0_local_memory/ilmb_v10. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for embsys9_i/microblaze_0_local_memory/dlmb_bram_if_cntlr. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for embsys9_i/microblaze_0_local_memory/ilmb_bram_if_cntlr. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for embsys9_i/microblaze_0_local_memory/lmb_bram. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for embsys9_i/microblaze_0_axi_periph/xbar. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for embsys9_i/microblaze_0_axi_periph. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for embsys9_i/mdm_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for embsys9_i/clk_wiz_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for embsys9_i/rst_clk_wiz_1_100M. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for embsys9_i/reset_inv_0. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1362.578 ; gain = 505.711
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1362.578 ; gain = 505.711
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port M00_ACLK in module embsys9_microblaze_0_axi_periph_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_ARESETN in module embsys9_microblaze_0_axi_periph_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M01_ACLK in module embsys9_microblaze_0_axi_periph_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M01_ARESETN in module embsys9_microblaze_0_axi_periph_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M02_ACLK in module embsys9_microblaze_0_axi_periph_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M02_ARESETN in module embsys9_microblaze_0_axi_periph_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S00_ACLK in module embsys9_microblaze_0_axi_periph_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S00_ARESETN in module embsys9_microblaze_0_axi_periph_1 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1362.578 ; gain = 505.711
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1362.578 ; gain = 505.711
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1362.578 ; gain = 505.711
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1369.664 ; gain = 512.797
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1374.836 ; gain = 517.969
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1374.836 ; gain = 517.969
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1374.836 ; gain = 517.969
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1374.836 ; gain = 517.969
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1374.836 ; gain = 517.969
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1374.836 ; gain = 517.969
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+-----------------------------+----------+
+|      |BlackBox name                |Instances |
++------+-----------------------------+----------+
+|1     |embsys9_xbar_1               |         1|
+|2     |embsys9_axi_gpio_0_0         |         1|
+|3     |embsys9_axi_uartlite_0_0     |         1|
+|4     |embsys9_clk_wiz_1_1          |         1|
+|5     |embsys9_mdm_1_1              |         1|
+|6     |embsys9_microblaze_0_0       |         1|
+|7     |embsys9_reset_inv_0_1        |         1|
+|8     |embsys9_rst_clk_wiz_1_100M_1 |         1|
+|9     |embsys9_dlmb_bram_if_cntlr_1 |         1|
+|10    |embsys9_dlmb_v10_1           |         1|
+|11    |embsys9_ilmb_bram_if_cntlr_1 |         1|
+|12    |embsys9_ilmb_v10_1           |         1|
+|13    |embsys9_lmb_bram_1           |         1|
++------+-----------------------------+----------+
+
+Report Cell Usage: 
++------+---------------------------+------+
+|      |Cell                       |Count |
++------+---------------------------+------+
+|1     |embsys9_axi_gpio_0         |     1|
+|2     |embsys9_axi_uartlite_0     |     1|
+|3     |embsys9_clk_wiz_1          |     1|
+|4     |embsys9_dlmb_bram_if_cntlr |     1|
+|5     |embsys9_dlmb_v10           |     1|
+|6     |embsys9_ilmb_bram_if_cntlr |     1|
+|7     |embsys9_ilmb_v10           |     1|
+|8     |embsys9_lmb_bram           |     1|
+|9     |embsys9_mdm_1              |     1|
+|10    |embsys9_microblaze_0       |     1|
+|11    |embsys9_reset_inv_0        |     1|
+|12    |embsys9_rst_clk_wiz_1_100M |     1|
+|13    |embsys9_xbar               |     1|
+|14    |IBUF                       |     3|
+|15    |OBUF                       |     3|
++------+---------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1374.836 ; gain = 517.969
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 9 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 1374.836 ; gain = 517.969
+Synthesis Optimization Complete : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1374.836 ; gain = 517.969
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1386.941 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1396.531 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: 382bd9e7
+INFO: [Common 17-83] Releasing license: Synthesis
+66 Infos, 62 Warnings, 4 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:32 . Memory (MB): peak = 1396.531 ; gain = 937.754
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Common 17-1381] The checkpoint 'C:/SimpleLock/Vivado9/Vivado9.runs/synth_1/embsys9_wrapper.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file embsys9_wrapper_utilization_synth.rpt -pb embsys9_wrapper_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 18 17:18:34 2025...

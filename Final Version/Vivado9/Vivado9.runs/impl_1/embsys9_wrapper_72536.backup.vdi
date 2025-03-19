@@ -1,0 +1,110 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Tue Mar 18 17:03:44 2025
+# Process ID: 72536
+# Current directory: C:/SimpleLock/Vivado9/Vivado9.runs/impl_1
+# Command line: vivado.exe -log embsys9_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source embsys9_wrapper.tcl -notrace
+# Log file: C:/SimpleLock/Vivado9/Vivado9.runs/impl_1/embsys9_wrapper.vdi
+# Journal file: C:/SimpleLock/Vivado9/Vivado9.runs/impl_1\vivado.jou
+# Running On: Dawgburts-Mothership, OS: Windows, CPU Frequency: 2918 MHz, CPU Physical cores: 14, Host memory: 34003 MB
+#-----------------------------------------------------------
+source embsys9_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.2/data/ip'.
+Command: link_design -top embsys9_wrapper -part xc7a100tcsg324-1
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-454] Reading design checkpoint 'c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/ip/embsys9_axi_gpio_0_0/embsys9_axi_gpio_0_0.dcp' for cell 'embsys9_i/axi_gpio_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/ip/embsys9_axi_uartlite_0_0/embsys9_axi_uartlite_0_0.dcp' for cell 'embsys9_i/axi_uartlite_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/ip/embsys9_clk_wiz_1_1/embsys9_clk_wiz_1_1.dcp' for cell 'embsys9_i/clk_wiz_1'
+INFO: [Project 1-454] Reading design checkpoint 'c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/ip/embsys9_mdm_1_1/embsys9_mdm_1_1.dcp' for cell 'embsys9_i/mdm_1'
+INFO: [Project 1-454] Reading design checkpoint 'c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/ip/embsys9_microblaze_0_0/embsys9_microblaze_0_0.dcp' for cell 'embsys9_i/microblaze_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/ip/embsys9_reset_inv_0_1/embsys9_reset_inv_0_1.dcp' for cell 'embsys9_i/reset_inv_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/ip/embsys9_rst_clk_wiz_1_100M_1/embsys9_rst_clk_wiz_1_100M_1.dcp' for cell 'embsys9_i/rst_clk_wiz_1_100M'
+INFO: [Project 1-454] Reading design checkpoint 'c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/ip/embsys9_xbar_1/embsys9_xbar_1.dcp' for cell 'embsys9_i/microblaze_0_axi_periph/xbar'
+INFO: [Project 1-454] Reading design checkpoint 'c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/ip/embsys9_dlmb_bram_if_cntlr_1/embsys9_dlmb_bram_if_cntlr_1.dcp' for cell 'embsys9_i/microblaze_0_local_memory/dlmb_bram_if_cntlr'
+INFO: [Project 1-454] Reading design checkpoint 'c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/ip/embsys9_dlmb_v10_1/embsys9_dlmb_v10_1.dcp' for cell 'embsys9_i/microblaze_0_local_memory/dlmb_v10'
+INFO: [Project 1-454] Reading design checkpoint 'c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/ip/embsys9_ilmb_bram_if_cntlr_1/embsys9_ilmb_bram_if_cntlr_1.dcp' for cell 'embsys9_i/microblaze_0_local_memory/ilmb_bram_if_cntlr'
+INFO: [Project 1-454] Reading design checkpoint 'c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/ip/embsys9_ilmb_v10_1/embsys9_ilmb_v10_1.dcp' for cell 'embsys9_i/microblaze_0_local_memory/ilmb_v10'
+INFO: [Project 1-454] Reading design checkpoint 'c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/ip/embsys9_lmb_bram_1/embsys9_lmb_bram_1.dcp' for cell 'embsys9_i/microblaze_0_local_memory/lmb_bram'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.153 . Memory (MB): peak = 918.293 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 262 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2022.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/ip/embsys9_microblaze_0_0/embsys9_microblaze_0_0.xdc] for cell 'embsys9_i/microblaze_0/U0'
+Finished Parsing XDC File [c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/ip/embsys9_microblaze_0_0/embsys9_microblaze_0_0.xdc] for cell 'embsys9_i/microblaze_0/U0'
+Parsing XDC File [c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/ip/embsys9_axi_gpio_0_0/embsys9_axi_gpio_0_0_board.xdc] for cell 'embsys9_i/axi_gpio_0/U0'
+Finished Parsing XDC File [c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/ip/embsys9_axi_gpio_0_0/embsys9_axi_gpio_0_0_board.xdc] for cell 'embsys9_i/axi_gpio_0/U0'
+Parsing XDC File [c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/ip/embsys9_axi_gpio_0_0/embsys9_axi_gpio_0_0.xdc] for cell 'embsys9_i/axi_gpio_0/U0'
+Finished Parsing XDC File [c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/ip/embsys9_axi_gpio_0_0/embsys9_axi_gpio_0_0.xdc] for cell 'embsys9_i/axi_gpio_0/U0'
+Parsing XDC File [c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/ip/embsys9_axi_uartlite_0_0/embsys9_axi_uartlite_0_0_board.xdc] for cell 'embsys9_i/axi_uartlite_0/U0'
+Finished Parsing XDC File [c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/ip/embsys9_axi_uartlite_0_0/embsys9_axi_uartlite_0_0_board.xdc] for cell 'embsys9_i/axi_uartlite_0/U0'
+Parsing XDC File [c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/ip/embsys9_axi_uartlite_0_0/embsys9_axi_uartlite_0_0.xdc] for cell 'embsys9_i/axi_uartlite_0/U0'
+Finished Parsing XDC File [c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/ip/embsys9_axi_uartlite_0_0/embsys9_axi_uartlite_0_0.xdc] for cell 'embsys9_i/axi_uartlite_0/U0'
+Parsing XDC File [c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/ip/embsys9_clk_wiz_1_1/embsys9_clk_wiz_1_1_board.xdc] for cell 'embsys9_i/clk_wiz_1/inst'
+Finished Parsing XDC File [c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/ip/embsys9_clk_wiz_1_1/embsys9_clk_wiz_1_1_board.xdc] for cell 'embsys9_i/clk_wiz_1/inst'
+Parsing XDC File [c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/ip/embsys9_clk_wiz_1_1/embsys9_clk_wiz_1_1.xdc] for cell 'embsys9_i/clk_wiz_1/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/ip/embsys9_clk_wiz_1_1/embsys9_clk_wiz_1_1.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/ip/embsys9_clk_wiz_1_1/embsys9_clk_wiz_1_1.xdc:57]
+get_clocks: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1625.559 ; gain = 579.785
+Finished Parsing XDC File [c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/ip/embsys9_clk_wiz_1_1/embsys9_clk_wiz_1_1.xdc] for cell 'embsys9_i/clk_wiz_1/inst'
+Parsing XDC File [c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/ip/embsys9_rst_clk_wiz_1_100M_1/embsys9_rst_clk_wiz_1_100M_1_board.xdc] for cell 'embsys9_i/rst_clk_wiz_1_100M/U0'
+CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, Cannot set PACKAGE_PIN property of ports,  port reset_0 can not be placed on PACKAGE_PIN C12 because the PACKAGE_PIN is occupied by port reset. Please note that for projects targeting board parts, user LOC constraints cannot override constraints provided with the board. [c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/ip/embsys9_rst_clk_wiz_1_100M_1/embsys9_rst_clk_wiz_1_100M_1_board.xdc:3]
+Finished Parsing XDC File [c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/ip/embsys9_rst_clk_wiz_1_100M_1/embsys9_rst_clk_wiz_1_100M_1_board.xdc] for cell 'embsys9_i/rst_clk_wiz_1_100M/U0'
+Parsing XDC File [c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/ip/embsys9_rst_clk_wiz_1_100M_1/embsys9_rst_clk_wiz_1_100M_1.xdc] for cell 'embsys9_i/rst_clk_wiz_1_100M/U0'
+Finished Parsing XDC File [c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/ip/embsys9_rst_clk_wiz_1_100M_1/embsys9_rst_clk_wiz_1_100M_1.xdc] for cell 'embsys9_i/rst_clk_wiz_1_100M/U0'
+Parsing XDC File [C:/SimpleLock/Vivado9/Vivado9.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc]
+CRITICAL WARNING: [Common 17-161] Invalid option value '#ja[1]' specified for 'objects'. [C:/SimpleLock/Vivado9/Vivado9.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:104]
+CRITICAL WARNING: [Common 17-161] Invalid option value '#ja[3]' specified for 'objects'. [C:/SimpleLock/Vivado9/Vivado9.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:107]
+WARNING: [Vivado 12-584] No ports matched 'sclk_io'. [C:/SimpleLock/Vivado9/Vivado9.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:269]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/SimpleLock/Vivado9/Vivado9.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:269]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sda_io'. [C:/SimpleLock/Vivado9/Vivado9.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:270]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/SimpleLock/Vivado9/Vivado9.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:270]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sclk_io'. [C:/SimpleLock/Vivado9/Vivado9.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:272]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/SimpleLock/Vivado9/Vivado9.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:272]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sda_io'. [C:/SimpleLock/Vivado9/Vivado9.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:273]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/SimpleLock/Vivado9/Vivado9.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:273]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hc05_uart_rxd'. [C:/SimpleLock/Vivado9/Vivado9.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:276]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/SimpleLock/Vivado9/Vivado9.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:276]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hc05_uart_rxd'. [C:/SimpleLock/Vivado9/Vivado9.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:277]
+CRITICAL WARNING: [Common 17-161] Invalid option value '##' specified for 'objects'. [C:/SimpleLock/Vivado9/Vivado9.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:277]
+WARNING: [Vivado 12-584] No ports matched 'hc05_uart_txd'. [C:/SimpleLock/Vivado9/Vivado9.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:279]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/SimpleLock/Vivado9/Vivado9.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:279]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hc05_uart_txd'. [C:/SimpleLock/Vivado9/Vivado9.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:280]
+CRITICAL WARNING: [Common 17-161] Invalid option value '##' specified for 'objects'. [C:/SimpleLock/Vivado9/Vivado9.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc:280]
+Finished Parsing XDC File [C:/SimpleLock/Vivado9/Vivado9.srcs/constrs_1/imports/constraints/nexysA7fpga.xdc]
+Parsing XDC File [c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/ip/embsys9_mdm_1_1/embsys9_mdm_1_1.xdc] for cell 'embsys9_i/mdm_1/U0'
+INFO: [Timing 38-2] Deriving generated clocks [c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/ip/embsys9_mdm_1_1/embsys9_mdm_1_1.xdc:50]
+Finished Parsing XDC File [c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/ip/embsys9_mdm_1_1/embsys9_mdm_1_1.xdc] for cell 'embsys9_i/mdm_1/U0'
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Generating merged BMM file for the design top 'embsys9_wrapper'...
+INFO: [Memdata 28-144] Successfully populated the BRAM INIT strings from the following elf files: c:/SimpleLock/Vivado9/Vivado9.gen/sources_1/bd/embsys9/ip/embsys9_microblaze_0_0/data/mb_bootloop_le.elf 
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1625.559 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 96 instances were transformed.
+  LUT6_2 => LUT6_2 (LUT5, LUT6): 80 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 16 instances
+
+27 Infos, 8 Warnings, 11 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:30 . Memory (MB): peak = 1625.559 ; gain = 1164.176
+
+*** Halting run - EA reset detected ***
+
+
+
+    while executing
+"start_step opt_design"
+    (file "embsys9_wrapper.tcl" line 174)
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 18 17:04:21 2025...

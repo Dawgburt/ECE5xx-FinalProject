@@ -1,0 +1,76 @@
+#include "xgpio.h"
+#include "xparameters.h"
+#include "sleep.h"
+#include "platform.h"
+#include "xuartlite.h"  // Include UARTLite driver
+#include <string.h>
+
+#define GPIO_DEVICE_ID XPAR_AXI_GPIO_0_DEVICE_ID
+#define UART_DEVICE_ID XPAR_AXI_UARTLITE_0_DEVICE_ID
+#define LED_CHANNEL 1
+#define FAN_CHANNEL 2
+#define ON  1
+#define OFF 0
+#define PIN "1234"  // User PIN as a string
+
+XGpio Gpio;
+XUartLite UartLite;
+
+int main() {
+    int status;
+    char input_buffer[5] = {0}; // Buffer to store input (4 characters + null terminator)
+    int i;
+
+    init_platform();
+
+    // Initialize the GPIO driver
+    status = XGpio_Initialize(&Gpio, GPIO_DEVICE_ID);
+    if (status != XST_SUCCESS) {
+        return XST_FAILURE;
+    }
+    XGpio_SetDataDirection(&Gpio, LED_CHANNEL, 0x0); // Set GPIO as output
+
+    // Initialize the UARTLite driver
+    status = XUartLite_Initialize(&UartLite, UART_DEVICE_ID);
+    if (status != XST_SUCCESS) {
+        return XST_FAILURE;
+    }
+
+    while (1) {
+        // Read 4 characters from UARTLite
+
+        /*
+		for (i = 0; i < 4; i++) {
+            while (XUartLite_Recv(&UartLite, (u8 *)&input_buffer[i], 1) == 0);
+        }
+        input_buffer[4] = '\0'; // Null-terminate the string
+        */
+
+        // Simulate "1234" being received
+        input_buffer[0] = '1';
+        input_buffer[1] = '2';
+        input_buffer[2] = '3';
+        input_buffer[3] = '4';
+        input_buffer[4] = '\0';
+
+        if (strcmp(input_buffer, PIN) == 0) {
+            XGpio_DiscreteWrite(&Gpio, LED_CHANNEL, ON);
+            XGpio_DiscreteWrite(&Gpio, FAN_CHANNEL, ON);
+            sleep(3);
+            XGpio_DiscreteWrite(&Gpio, LED_CHANNEL, OFF);
+            XGpio_DiscreteWrite(&Gpio, FAN_CHANNEL, OFF);
+            return 0;
+        } else {
+            // Blink LED 3 times
+            for (i = 0; i < 3; i++) {
+                XGpio_DiscreteWrite(&Gpio, LED_CHANNEL, ON);
+                sleep(1);
+                XGpio_DiscreteWrite(&Gpio, LED_CHANNEL, OFF);
+                sleep(1);
+                return 0;
+            }
+        }
+    }
+    cleanup_platform();
+    return 0;
+}

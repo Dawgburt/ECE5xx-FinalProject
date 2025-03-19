@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="DLapp9" location="C:/SimpleLock/Vitis9/DLapp9" platform="C:/SimpleLock/Vitis9/DLplatform9/export/DLplatform9/DLplatform9.xpfm" platformUID="xilinx:nexys-a7-100t::0.0(custom)" systemProject="DLapp9_system" sysConfig="DLplatform9" runtime="C/C++" cpu="standalone_domain" cpuInstance="microblaze_0" os="standalone" mssSignature="85f57e2faaef59302490c4bb3f7110f9">
+  <configuration name="Debug" id="xilinx.gnu.mb.exe.debug.542087079">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.mb.exe.release.1957098042" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="hello_world"/>
+</sdkproject:SdkProject>

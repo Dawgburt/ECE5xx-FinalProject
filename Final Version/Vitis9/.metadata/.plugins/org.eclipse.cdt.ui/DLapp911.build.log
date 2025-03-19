@@ -1,0 +1,21 @@
+17:33:12 **** Incremental Build of configuration Debug for project DLapp911 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -IC:/SimpleLock/Vitis9/DLplatform9/export/DLplatform9/sw/DLplatform9/standalone_domain/bspinclude/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: DLapp911.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LC:/SimpleLock/Vitis9/DLplatform9/export/DLplatform9/sw/DLplatform9/standalone_domain/bsplib/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "DLapp911.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: DLapp911.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size DLapp911.elf  |tee "DLapp911.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   4036	    324	   3216	   7576	   1d98	DLapp911.elf
+'Finished building: DLapp911.elf.size'
+' '
+
+17:33:12 Build Finished (took 659ms)
+
