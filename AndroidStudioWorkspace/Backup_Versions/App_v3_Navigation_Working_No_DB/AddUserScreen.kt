@@ -265,6 +265,9 @@ fun AddUserScreen(navController: NavController)
                         username.value.isEmpty() -> {
                             usernameError.value = "Username cannot be empty"
                         }
+                        username.value.lowercase() == "null" -> {
+                            usernameError.value = "Username cannot be null"
+                        }
                         usernameVerify.value.isEmpty() -> {
                             usernameVerifyError.value = "Verify Username cannot be empty"
                         }
@@ -273,6 +276,9 @@ fun AddUserScreen(navController: NavController)
                         }
                         password.value.isEmpty() -> {
                             passwordError.value = "Password cannot be empty"
+                        }
+                        password.value.lowercase() == "null" -> {
+                            passwordError.value = "Password cannot be null"
                         }
                         passwordVerify.value.isEmpty() -> {
                             passwordVerifyError.value = "Verify Password cannot be empty"

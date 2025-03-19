@@ -33,7 +33,7 @@ import androidx.navigation.NavController
 //Add User for the App
 //User Enters and Verifies Username, Password, and PIN. Adds to database with proper checking
 @Composable
-fun AddUserScreen(navController: NavController)
+fun AddUserScreen(navController: NavController, userViewModel: UserViewModel)
 {
     //Variable to store the Username, Passowrd, PIN and associated Verifications
     //rememberSaveable persists across config changes and pausing the app
@@ -265,9 +265,6 @@ fun AddUserScreen(navController: NavController)
                         username.value.isEmpty() -> {
                             usernameError.value = "Username cannot be empty"
                         }
-                        username.value.lowercase() == "null" -> {
-                            usernameError.value = "Username cannot be null"
-                        }
                         usernameVerify.value.isEmpty() -> {
                             usernameVerifyError.value = "Verify Username cannot be empty"
                         }
@@ -276,9 +273,6 @@ fun AddUserScreen(navController: NavController)
                         }
                         password.value.isEmpty() -> {
                             passwordError.value = "Password cannot be empty"
-                        }
-                        password.value.lowercase() == "null" -> {
-                            passwordError.value = "Password cannot be null"
                         }
                         passwordVerify.value.isEmpty() -> {
                             passwordVerifyError.value = "Verify Password cannot be empty"
