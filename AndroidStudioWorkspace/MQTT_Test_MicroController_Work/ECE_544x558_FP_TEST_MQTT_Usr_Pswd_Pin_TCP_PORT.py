@@ -86,37 +86,39 @@ user_database = {
     "nick": {"password": "adminpass", "pin": "5678"}
 }
 
-# Store expected PIN and received username
+# Separate variables for username, password, and pin for comparison
+username_received = None
+password_received = None
+pin_received = None
+expected_username = None
+expected_password = None
 expected_pin = None
-received_username = None
 
 def handle_username(topic, msg):
     """Handles username authentication."""
-    global received_username
+    global username_received, expected_username
     try:
-        # Decode and store the username
-        received_username = msg.decode('utf-8')
-        if received_username in user_database:
-            print(f"Username Accepted: {received_username}")
+        username_received = str(msg, 'utf-8')
+        if username_received in user_database:
+            expected_username = username_received
+            print(f"Username Accepted: {username_received}")
         else:
-            print(f"Invalid Username: {received_username}")
+            print(f"Invalid Username: {username_received}")
     except Exception as e:
         print(f"Error in username handling: {str(e)}")
 
 def handle_password(topic, msg):
     """Handles password authentication."""
-    global expected_pin, received_username
+    global password_received, expected_password, expected_pin, expected_username
     try:
-        # Decode and get the password
-        received_password = msg.decode('utf-8')
-        
-        # Check if the username was received and is valid
-        if received_username and received_username in user_database:
-            if user_database[received_username]["password"] == received_password:
-                expected_pin = user_database[received_username]["pin"]
-                print(f"Password Accepted for {received_username}")
+        password_received = str(msg, 'utf-8')
+        if expected_username and expected_username in user_database:
+            if user_database[expected_username]["password"] == password_received:
+                expected_password = password_received
+                expected_pin = user_database[expected_username]["pin"]
+                print(f"Password Accepted for {expected_username}")
             else:
-                print(f"Invalid Password for {received_username}")
+                print(f"Invalid Password for {expected_username}")
         else:
             print("Username Not Provided")
     except Exception as e:
@@ -124,12 +126,10 @@ def handle_password(topic, msg):
 
 def handle_pin(topic, msg):
     """Handles PIN verification."""
-    global expected_pin
-    received_pin = msg.decode('utf-8')
+    global pin_received, expected_pin
+    pin_received = str(msg, 'utf-8')
 
-    if expected_pin is None:
-        lock_status = "No Credentials Provided"
-    elif received_pin == expected_pin:
+    if pin_received == expected_pin:
         lock_status = "Match Found - Unlocking"
         time.sleep(10)  # Simulate unlocking
         lock_status = "Lock Closed"
@@ -155,4 +155,3 @@ mqtt_client.subscribe("ECE544x558/FP/App/RemoteKey/PIN")
 while True:
     mqtt_client.check_msg()
     time.sleep(1)  # Avoid high CPU usage
-
