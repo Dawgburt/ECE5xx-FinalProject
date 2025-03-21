@@ -1,0 +1,11 @@
+I segmented the App Demo videos in an effort to show the full range of functionality.
+Unfortunately this resulted in a file size much too large for github or canvas.
+To resolve this I uploaded thme to youtube and have included the links here:
+
+
+Link to each individual video:
+Video 1: https://www.youtube.com/watch?v=BexOf8DCyZg
+Video 2: https://www.youtube.com/watch?v=UVoBW27DRCE
+Video 3: https://www.youtube.com/watch?v=AfCqed4LQYo
+Video 4: https://www.youtube.com/watch?v=FxUrwwQ-bNg
+Video 5: https://www.youtube.com/watch?v=d81q8cRyvig
